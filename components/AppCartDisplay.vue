@@ -1,12 +1,13 @@
 <template>
+<!-- <div class="container"> -->
   <div>
     <section v-if="cartCount > 0">
       <table>
         <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Total</th>
+          <th>商品</th>
+          <th>価格</th>
+          <th>個数</th>
+          <th>合計</th>
           <th></th>
         </tr>
         <tr v-for="item in cart" :key="item.id">
@@ -39,16 +40,16 @@
         <div class="total">
           <div class="caption">
             <p>
-              <strong>Subtotal:</strong>
+              <strong>小計:</strong>
             </p>
-            <p>Shipping:</p>
-            <p class="golden">Total:</p>
+            <p>配送費:</p>
+            <p class="golden">合計:</p>
           </div>
           <div class="num">
             <p>
               <strong>{{ cartTotal | dollar }}</strong>
             </p>
-            <p>Free Shipping</p>
+            <p>無料</p>
             <p class="golden">{{ cartTotal | dollar }}</p>
           </div>
         </div>
@@ -56,12 +57,13 @@
     </section>
 
     <section v-else class="center">
-      <p>Your cart is empty, fill it up!</p>
+      <p>まだカートに商品が入っていません。</p>
       <button class="pay-with-stripe">
-        <nuxt-link exact to="/">Back Home</nuxt-link>
+        <nuxt-link exact to="/">ホームに戻る</nuxt-link>
       </button>
     </section>
   </div>
+  <!-- </div> -->
 </template>
 
 <script>

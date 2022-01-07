@@ -1,22 +1,42 @@
 <template>
-  <div>
-    <app-nav />
-    <main>
+  <div class="page-wrapper">
+    <!-- <app-nav /> -->
+    <!-- <main> -->
+    <Nav />
       <nuxt />
-    </main>
-    <app-footer />
+      <SearchPopup />
+      <Footer />
+    <!-- </main> -->
+    <!-- <app-footer /> -->
   </div>
 </template>
 
 <script>
 import AppFooter from "~/components/AppFooter.vue";
 import AppNav from "~/components/AppNav.vue";
+import SearchPopup from "~/components/SearchPopup";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 export default {
   components: {
     AppFooter,
-    AppNav
-  }
+    AppNav,
+    SearchPopup,
+    Nav,
+    Footer,
+  },
+  head() {
+    return {
+      title: "Agrikol - Vue Nuxt Template for Agriculture Farm & Farmers",
+    };
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start();
+      setTimeout(() => this.$nuxt.$loading.finish(), 500);
+    });
+  },
 };
 </script>
 

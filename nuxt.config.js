@@ -25,11 +25,20 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     link: [
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Montserrat:300,600|PT+Serif&display=swap'
-      }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:300,600|PT+Serif&display=swap' },
+      { rel: 'apple-touch-icon', sizes:'180x180', type: 'image/x-icon', href: '/assets/images/favicons/apple-touch-icon.png' },
+      { rel: 'icon', sizes:'32x32', type: 'image/png', href: '/assets/images/favicons/favicon-32x32.png' },
+      { rel: 'icon', sizes:'16x16', type: 'image/png', href: '/assets/images/favicons/favicon-16x16.png' },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&display=swap" },
+      { rel: "stylesheet", href: "/assets/css/bootstrap.min.css" },
+      { rel: "stylesheet", href: "/assets/css/bootstrap-datepicker.min.css" },
+      { rel: "stylesheet", href: "/assets/css/vegas.min.css" },
+      { rel: "stylesheet", href: "/assets/css/animate.min.css" },
+      { rel: "stylesheet", href: "/assets/plugins/glightbox/glightbox.min.css" },
+      { rel: "stylesheet", href: "/assets/css/fontawesome-all.min.css" },
+      { rel: "stylesheet", href: "/assets/css/agrikol_iconl.css" },
+      { rel: "stylesheet", href: "/assets/css/style.css" },
+      { rel: "stylesheet", href: "/assets/css/responsive.css" }
     ]
   },
   generate: {
@@ -42,11 +51,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['normalize.css', { src: '~/assets/main.scss', lang: 'sass' }],
+  // css: ['normalize.css', { src: '~/assets/main.scss', lang: 'sass' }],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [`~/plugins/currency-filter.js`],
+  plugins: [
+    {src: 'plugins/owl.js', ssr: false},
+    `~/plugins/currency-filter.js`
+    ],
   /*
    ** Nuxt.js modules
    */

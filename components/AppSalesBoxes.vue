@@ -15,18 +15,18 @@ export default {
       boxes: [
         {
           icon: "/icon-package.svg",
-          heading: "Free Shipping Globally",
-          details: "Delivery in 4 Days"
+          heading: "全世界送料無料",
+          details: "最大４日"
         },
         {
           icon: "/icon-cal.svg",
-          heading: "24/7 Customer Service",
-          details: "Call us any time"
+          heading: "２４/７ カスタマーサービス",
+          details: "いつでもお電話承ります"
         },
         {
           icon: "/icon-service.svg",
-          heading: "Easy Online Returns",
-          details: "Send Within 30 Days"
+          heading: "返品簡単対応",
+          details: "ご注文から30日以内"
         }
       ]
     };

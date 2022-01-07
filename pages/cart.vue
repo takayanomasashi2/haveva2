@@ -1,32 +1,36 @@
 <template>
-  <div>
-    <app-cart-steps />
-    <hr />
-    <h1 class="center">Your Cart</h1>
+  <!-- <div class="container"> -->
+    <div>
+      <app-cart-steps />
+      <hr />
+      <div class="container">
+        <h1 class="center">買い物カゴ</h1>
 
-    <section v-if="cartUIStatus === 'idle'">
-      <app-cart-display />
-    </section>
+        <section v-if="cartUIStatus === 'idle'">
+          <app-cart-display />
+        </section>
 
-    <section v-else-if="cartUIStatus === 'loading'" class="loader">
-      <app-loader />
-    </section>
+        <section v-else-if="cartUIStatus === 'loading'" class="loader">
+          <app-loader />
+        </section>
 
-    <section v-else-if="cartUIStatus === 'success'" class="success">
-      <h2>Success!</h2>
-      <p>Thank you for your purchase. You'll be receiving your items in 4 business days.</p>
-      <p>Forgot something?</p>
-      <button class="pay-with-stripe">
-        <nuxt-link exact to="/">Back to Home</nuxt-link>
-      </button>
-    </section>
+        <section v-else-if="cartUIStatus === 'success'" class="success">
+          <h2>Success!</h2>
+          <p>Thank you for your purchase. You'll be receiving your items in 4 business days.</p>
+          <p>Forgot something?</p>
+          <button class="pay-with-stripe">
+            <nuxt-link exact to="/">Back to Home</nuxt-link>
+          </button>
+        </section>
 
-    <section v-else-if="cartUIStatus === 'failure'">
-      <p>Oops, something went wrong. Redirecting you to your cart to try again.</p>
-    </section>
+        <section v-else-if="cartUIStatus === 'failure'">
+          <p>Oops, something went wrong. Redirecting you to your cart to try again.</p>
+        </section>
 
-    <app-sales-boxes />
-  </div>
+        <app-sales-boxes />
+        </div>
+    </div>
+  <!-- </div> -->
 </template>
 
 <script>

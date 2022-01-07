@@ -1,32 +1,32 @@
 <template>
   <div id="app">
     <div v-if="cartUIStatus === 'idle'" class="payment">
-      <h3>Please enter your payment details:</h3>
-      <label for="email">Email</label>
+      <h3>お支払い情報</h3>
+      <label for="email">Eメール</label>
       <br />
       <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
       <br />
-      <label for="card">Credit Card</label>
+      <label for="card">クレジットカード</label>
       <br />
       <small>
-        Test using these Stripe test credit card numbers with any CVC, postal code, and expiration date in the future:
+        任意のCVC、郵便番号、有効期限のStripeテストクレジットカード番号を使用し、テストできます。:
         <ul>
           <li>
             <span class="cc-number">4242 4242 4242 4242</span>
           </li>
-          <li>
+          <!-- <li>
             <span class="cc-number">4000 0027 6000 3184</span> (requires authentication, will trigger a pop-up)
           </li>
           <li>
             <span class="cc-number">4000 0000 0000 9995</span> (will decline with a decline code of insufficient funds)
-          </li>
+          </li> -->
         </ul>
       </small>
       <card
         class="stripe-card"
         id="card"
         :class="{ complete }"
-        stripe="pk_test_8ssZgwB2PiH0ajJksD2gVbsG00u7Y3IDPv"
+        stripe="pk_test_51I95IEJUvHtkJ9eH9uYLsny9V9LKOZxQPH7RENpECWEdWy20i8nI6novQPdaj9UO4VU2w1eBlpva4ttkI10ivEL800R4FK05q4"
         :options="stripeOptions"
         @change="complete = $event.complete"
       />
@@ -35,7 +35,7 @@
         class="pay-with-stripe button"
         @click="pay"
         :disabled="!complete || !stripeEmail || loading"
-      >Pay with credit card</button>
+      >クレジットカードで支払う</button>
     </div>
 
     <div v-else class="statussubmit">

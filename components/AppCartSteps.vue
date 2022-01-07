@@ -2,15 +2,15 @@
   <section>
     <div class="shopping">
       <h2 :class="{ active: cartUIStatus === 'idle' && cartCount === 0 }">01</h2>
-      <h4>Shopping Cart</h4>
+      <h4>買い物カゴに入れる</h4>
     </div>
     <div class="checkout">
       <h2 :class="{ active: cartUIStatus === 'idle' && cartCount > 0 }">02</h2>
-      <h4>Check out</h4>
+      <h4>お会計</h4>
     </div>
     <div class="order">
       <h2 :class="{ active: cartUIStatus === 'success' }">03</h2>
-      <h4>Order Complete</h4>
+      <h4>注文確定</h4>
     </div>
   </section>
 </template>
