@@ -174,7 +174,16 @@
               </button>
             </div>
             <ul>
-              <li><nuxt-link to="/">Home 01</nuxt-link></li>
+              <li>
+                <nuxt-link to="/all">葬儀用</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/women">頑丈タイプ</nuxt-link>
+              </li>
+              <li>
+                <nuxt-link to="/men">デザイン</nuxt-link>
+              </li>
+              <!-- <li><nuxt-link to="/">Home 01</nuxt-link></li>
               <li><nuxt-link to="/index2">Home 02</nuxt-link></li>
               <li><nuxt-link to="/index3">Home 03</nuxt-link></li>
               <li><nuxt-link to="/index4">Home 04</nuxt-link></li>
@@ -191,13 +200,13 @@
                   <li><nuxt-link to="/index3">Header 03</nuxt-link></li>
                   <li><nuxt-link to="/index4">Header 04</nuxt-link></li>
                   <li><nuxt-link to="/index5">Header 05</nuxt-link></li>
-                </ul>
+                </ul> -->
                 <!-- /.sub-menu -->
-              </li>
+              <!-- </li> -->
             </ul>
             <!-- /.sub-menu -->
           </li>
-          <li class="dropdown">
+          <!-- <li class="dropdown">
             <div class="menu-holder">
               Services<button class="dropdown-btn">
                 <i class="fa fa-angle-right"></i>
@@ -208,9 +217,9 @@
               <li>
                 <nuxt-link to="/service-detail">Services Detail</nuxt-link>
               </li>
-            </ul>
+            </ul> -->
             <!-- /.sub-menu -->
-          </li>
+          <!-- </li>
           <li class="dropdown">
             <div class="menu-holder">
               Our Projects<button class="dropdown-btn">
@@ -222,9 +231,9 @@
               <li>
                 <nuxt-link to="/projects_detail">Projects Detail</nuxt-link>
               </li>
-            </ul>
+            </ul> -->
             <!-- /.sub-menu -->
-          </li>
+          <!-- </li>
           <li class="dropdown">
             <div class="menu-holder">
               Shop<button class="dropdown-btn">
@@ -238,9 +247,9 @@
               </li>
               <li><nuxt-link to="/cart">Cart</nuxt-link></li>
               <li><nuxt-link to="/checkout">Checkout</nuxt-link></li>
-            </ul>
+            </ul> -->
             <!-- /.sub-menu -->
-          </li>
+          <!-- </li>
           <li class="dropdown">
             <div class="menu-holder">
               Pages<button class="dropdown-btn">
@@ -252,9 +261,9 @@
               <li><nuxt-link to="/why_choose_us">Why Choose Us</nuxt-link></li>
               <li><nuxt-link to="/farmers">Farmers</nuxt-link></li>
               <li><nuxt-link to="/gallery">Gallery</nuxt-link></li>
-            </ul>
+            </ul> -->
             <!-- /.sub-menu -->
-          </li>
+          <!-- </li>
           <li class="dropdown">
             <div class="menu-holder">
               News<button class="dropdown-btn">
@@ -264,12 +273,12 @@
             <ul>
               <li><nuxt-link to="/news">News</nuxt-link></li>
               <li><nuxt-link to="/news_detail">News Details</nuxt-link></li>
-            </ul>
+            </ul> -->
             <!-- /.sub-menu -->
-          </li>
+          <!-- </li>
           <li>
             <nuxt-link to="/contact">Contact</nuxt-link>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </header>
