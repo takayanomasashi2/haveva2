@@ -1,23 +1,32 @@
 /*------------ Variables -----------*/
 
 $brandprimary: #d96528;
-$brandsecondary: #03c1c1;
+$brandsecondary: #FFFFFF;
 
 /*------------  Global   -----------*/
 
 body {
-  border: 10px solid #ccc;
+  // border: 10px solid #272839;
   min-height: 100vh;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.4;
+  // line-height: 1;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+a {
+  color:#ffffff;
+}
+
+.button a {
+  color:#ffffff;
 }
 
 h1,
@@ -34,6 +43,7 @@ h1 {
 
 p {
   margin: 20px 0;
+  font-size: 20px;
 }
 
 *,
@@ -43,13 +53,13 @@ p {
   margin: 0;
 }
 
-a,
-a:active,
-a:visited {
-  color: $brandprimary;
-  text-decoration: none;
-  transition: 0.3s all ease;
-}
+// a,
+// a:active,
+// a:visited {
+//   color: #ffffff;
+//   text-decoration: none;
+//   transition: 0.3s all ease;
+// }
 
 button {
   border: 1px solid #ccc;
@@ -83,6 +93,7 @@ button.pay-with-stripe {
   color: white;
   font-size: 16px;
   border: none;
+
   &:hover {
     background: #c14103;
   }
@@ -131,7 +142,7 @@ input {
 .storegrid {
   width: 95%;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 0.1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 0px;
@@ -174,9 +185,9 @@ aside {
 
 @media screen and (max-width: 550px) {
   .storegrid {
-    width: 90%;
+    width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 0.1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 10px;
   }

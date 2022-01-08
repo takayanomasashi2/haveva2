@@ -59,7 +59,8 @@
     <section v-else class="center">
       <p>まだカートに商品が入っていません。</p>
       <button class="pay-with-stripe">
-        <nuxt-link exact to="/">ホームに戻る</nuxt-link>
+        <!-- <nuxt-link exact to="/">ホームに戻る</nuxt-link> -->
+        <a href="/">ホームに戻る</a>
       </button>
     </section>
   </div>

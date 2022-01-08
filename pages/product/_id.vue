@@ -1,4 +1,5 @@
 <template>
+<section class="blog-details">
   <div>
     <section class="item-contain">
       <section class="img">
@@ -15,37 +16,37 @@
         ></star-rating>
         <h4 class="price">{{ product.price | dollar }}</h4>
         <p>{{ product.description }}</p>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit dolores repudiandae animi quidem, eveniet quod dolor facilis dicta eligendi ullam error. Assumenda in fugiat natus enim similique nam itaque.</p>
+        <p>複数個選択いただいても、お一人様１個しか送れませんので、ご理解のほどよろしくお願い申し上げます。</p>
         <div class="product-options">
           <div class="quantity">
             <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
             <input type="number" v-model="quantity" />
             <button class="update-num" @click="quantity++">+</button>
           </div>
-          <div v-if="product.sizes" class="size">
+          <!-- <div v-if="product.sizes" class="size">
             <select v-model="size" class="size-picker" @change="showSizeRequiredMessage = false">
               <option :value="null" disabled hidden>Size</option>
               <option v-for="(size, key) in product.sizes" :key="key" :value="size">{{ size }}</option>
             </select>
-          </div>
+          </div> -->
         </div>
-        <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a size</p>
+        <!-- <p v-if="showSizeRequiredMessage" class="size-required-message">Please choose a size</p>
         <p>
           Available in additional colors:
           <strong>
             <span :style="`color: ${product.color}`">{{ product.color }}</span>
           </strong>
-        </p>
+        </p> -->
         <p>
-          <button class="button purchase" @click="cartAdd">Add to Cart</button>
+          <button class="button purchase" @click="cartAdd">カートに入れる</button>
         </p>
       </section>
     </section>
     <hr />
-    <div class="review">
-      <h2>Reviews</h2>
+    <!-- <div class="review">
+      <h2>Reviews</h2> -->
       <!-- maybe an image of a person? -->
-      <star-rating
+      <!-- <star-rating
         :rating="product.starrating"
         active-color="#000"
         :star-size="15"
@@ -54,9 +55,10 @@
       ></star-rating>
       <p>{{ product.review }}</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum iusto placeat consequatur voluptas sit mollitia ratione autem, atque sequi odio laborum, recusandae quia distinctio voluptatibus sint, quae aliquid possimus exercitationem.</p>
-    </div>
+    </div> -->
     <app-featured-products />
   </div>
+</section>
 </template>
 
 <script>
@@ -86,10 +88,10 @@ export default {
   },
   methods: {
     cartAdd() {
-      if (this.product.sizes && !this.size) {
-        this.showSizeRequiredMessage = true;
-        return;
-      }
+      // if (this.product.sizes && !this.size) {
+      //   this.showSizeRequiredMessage = true;
+      //   return;
+      // }
 
       let item = this.product;
       item = { 

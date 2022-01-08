@@ -10,7 +10,7 @@
     </div>
     <div class="order">
       <h2 :class="{ active: cartUIStatus === 'success' }">03</h2>
-      <h4>注文確定</h4>
+      <h4>注文<br>確定</h4>
     </div>
   </section>
 </template>

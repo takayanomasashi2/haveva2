@@ -9,7 +9,7 @@ export const state = () => ({
 });
 
 export const getters = {
-  featuredProducts: state => state.storedata.slice(0, 3),
+  featuredProducts: state => state.storedata.slice(0, 5),
   women: state => state.storedata.filter(el => el.gender === "Female"),
   men: state => state.storedata.filter(el => el.gender === "Male"),
   cartCount: state => {

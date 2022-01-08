@@ -17,17 +17,17 @@
         <h3>{{ item.name }}</h3>
         <h4 class="price">{{ item.price | dollar }}</h4>
         <NuxtLink :to="`product/${item.id}`">
-          <button class="multi-item">View Item ></button>
+          <button class="multi-item">詳細 ></button>
         </NuxtLink>
       </div>
     </transition-group>
-    <aside>
-      <h3>Special Sale</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam libero iusto nemo laboriosam perferendis voluptas ullam officiis, quibusdam quas quam eveniet est fugit delectus corporis incidunt nam esse suscipit itaque?</p>
-      <h3>Filter by Price:</h3>
+    <!-- <aside>
+      <h3>特別セール中</h3>
+      <p>送料だけはお客様負担ですが、価値ありそうなモノは全て差し上げます。<br>もちろん転売いただいても構いません。<br>※１商品に対する応募多数の場合、重複しないようにランダムセレクトさせていただきます。</p>
+      <h3>価格フィルタ:</h3>
       <p style="margin-top: 5px">
-        Max Price
-        <strong>${{ pricerange }}</strong>
+        最高値
+        <strong>{{ pricerange }}円</strong>
       </p>
       <input
         class="slider"
@@ -38,9 +38,9 @@
         :max="max"
         step="0.1"
       />
-      <span class="min">${{ min }}</span>
-      <span class="max">${{ max }}</span>
-    </aside>
+      <span class="min">{{ min }}円</span>
+      <span class="max">{{ max }}円</span>
+    </aside> -->
   </div>
 </template>
 

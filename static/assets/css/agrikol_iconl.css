@@ -39,6 +39,8 @@
 }
 .icon-shopping-cart:before {
   content: "\e904";
+  color: #FFFFFF;
+  font-size: 1.5em;
 }
 .icon-focus:before {
   content: "\e905";

@@ -1,99 +1,107 @@
 <template>
   <div>
-    <!-- <Nav /> -->
-    <Slider />
-    <!-- <AboutOne /> -->
-    <ServiceOne />
-    <!-- <BrandOne /> -->
-    <!-- <FeaturedOne /> -->
-    <!-- <VideoOne /> -->
-    <!-- <TestimonialOne /> -->
-    <TestimonialTwo />
-    <!-- <TestimonialThree /> -->
-    <!-- <TestimonialFour /> -->
-    <!-- <RecentProject /> -->
-    <!-- <Benefits /> -->
-    <!-- <ProductOne /> -->
-    <!-- <BlogOne /> -->
-    <!-- <CallToActionOne /> -->
-    <!-- <Footer /> -->
-    <!-- <app-textlockup />
-    <app-sales-boxes />
-    <app-textlockup>
-      <template v-slot:img>
-        <img src="/bag.jpg" alt="bag" />
-      </template>
-      <template v-slot:new>50%</template>
-      <template v-slot:sale>Storewide Sale</template>
-      <template v-slot:collection>Summer</template>
-      <template v-slot:details>All accessories</template>
-    </app-textlockup>
-    <app-featured-products /> -->
+
+    <Banner />
+    <!-- <Service />
+    <FeaturesOne />
+    <FeaturesTwo />
+    <Video />
+    <Counter />
+    <Pricing />
+    <Screenshots />
+    <Testimonial />
+    <Brands />
+    <Faq /> -->
+
+    <section class="blog-one blog-one__home" id="blog">
+      <img src="/assets/images/shapes/blog-shape-1-1.png" alt="" class="blog-one__shape-1">
+      <div class="container">
+        <div class="block-title text-center">
+          <span class="block-title__bubbles"></span>
+          <p>最新情報</p>
+          <h3>ニュース & 記事</h3>
+        </div>
+        <div class="row" data-v-1682312c>
+          <BlogHome
+            v-for="(item, index) in blogItems"
+            :id="item.id"
+            :key="index"
+            :image="item.image"
+            :image-url="item.image.url"
+            :name="item.name"
+            :body="item.body"
+            :price="item.price"
+            item-class="md:w-56 mb-20 shadow-lg bg-gray-200"
+            block-class="max-w"
+            image-class="w-full"
+            data-class="px-6 py-4"
+            :flag-body="false"
+          />
+        </div>
+      </div>
+    </section>
+    
+    <!-- <Contact /> -->
+    <!-- <CallToAction /> -->
   </div>
 </template>
 
 <script>
-import AppTextlockup from "~/components/AppTextlockup.vue";
-import AppSalesBoxes from "~/components/AppSalesBoxes.vue";
-import AppFeaturedProducts from "~/components/AppFeaturedProducts.vue";
-import Slider from "~/components/Slider";
-// import Nav from "../components/Nav";
-import NavTwo from "../components/NavTwo";
-import NavThree from "../components/NavThree";
-import NavFour from "../components/NavFour";
-import NavFive from "../components/NavFive";
-import AboutOne from "../components/AboutOne";
-import ServiceOne from "../components/ServiceOne";
-import BrandOne from "../components/BrandOne";
-import FeaturedOne from "../components/FeaturedOne";
-import VideoOne from "../components/VideoOne";
-import TestimonialOne from "../components/TestimonialOne";
-import TestimonialTwo from "../components/TestimonialTwo";
-import TestimonialThree from "../components/TestimonialThree";
-import TestimonialFour from "../components/TestimonialFour";
-import RecentProject from "../components/RecentProject";
-import Benefits from "../components/Benefits";
-import ProductOne from "../components/ProductOne";
-import BlogOne from "../components/BlogOne";
-import CallToActionOne from "../components/CallToActionOne";
-// import Footer from "../components/Footer";
+  import Banner from "~/components/Banner.vue";
+  import Service from "~/components/Service.vue";
+  import FeaturesOne from "~/components/FeaturesOne.vue";
+  import FeaturesTwo from "~/components/FeaturesTwo.vue";
+  import Video from "~/components/Video.vue";
+  import Counter from "~/components/Counter.vue";
+  import Pricing from "~/components/Pricing.vue";
+  import Screenshots from "~/components/Screenshots.vue";
+  import Testimonial from "~/components/Testimonial.vue";
+  import Brands from "~/components/Brands.vue";
+  import Faq from "~/components/Faq.vue";
+  import BlogHome from "~/components/BlogHome.vue";
+  import Contact from "~/components/Contact.vue";
+  import CallToAction from "~/components/CallToAction.vue";
+  import axios from 'axios'
+  import LayoutMenuList from "~/components/LayoutMenuList.vue";
+  import LayoutInformationList from "~/components/LayoutInformationList.vue";
 
 export default {
   components: {
-    // Footer,
-    CallToActionOne,
-    BlogOne,
-    ProductOne,
-    Benefits,
-    RecentProject,
-    TestimonialOne,
-    TestimonialTwo,
-    TestimonialThree,
-    TestimonialFour,
-    VideoOne,
-    FeaturedOne,
-    BrandOne,
-    ServiceOne,
-    AboutOne,
-    Slider,
-    // Nav,
-    NavTwo,
-    NavThree,
-    NavFour,
-    NavFive,
-    AppTextlockup,
-    AppSalesBoxes,
-    AppFeaturedProducts
-  }
-};
+    Banner,
+    Service,
+    FeaturesOne,
+    FeaturesTwo,
+    Video,
+    Counter,
+    Pricing,
+    Screenshots,
+    Testimonial,
+    Brands,
+    Faq,
+    BlogHome,
+    Contact,
+    CallToAction,
+    LayoutMenuList,
+    LayoutInformationList,
+  },
+  async asyncData({ $config }) {
+    const blog = await axios.get(
+      `${$config.apiUrl}/blog?limit=3&filters=flag[equals]true`,
+      {
+        headers: { 'X-MICROCMS-API-KEY': $config.apiKey },
+      }
+    )
+    //const info = await axios.get(`${$config.apiUrl}/information?limit=3`, {
+    //  headers: { 'X-MICROCMS-API-KEY': $config.apiKey },
+    //})
+    return {
+      blogItems: blog.data.contents,
+      //infoItems: info.data.contents,
+    }
+  },
+}
 </script>
 
 <style>
-.test {
-  margin: 3vh;
-}
 
-main {
-  width: 75vw;
-}
 </style>

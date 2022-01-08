@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>
-      <span>Featured Products</span>
+      <span>目玉商品</span>
     </h2>
     <div class="featureditems">
       <div class="item" v-for="product in featuredProducts" :key="product.id">
@@ -9,7 +9,7 @@
         <h3>{{ product.name }}</h3>
         <h4>{{ product.price | dollar }}</h4>
         <NuxtLink :to="`/product/${product.id}`">
-          <button class="multi-item">View Item ></button>
+          <button class="multi-item">詳細 ></button>
         </NuxtLink>
       </div>
     </div>

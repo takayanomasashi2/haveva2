@@ -1,142 +1,110 @@
 <template>
-    <div>
-      <footer class="site-footer">
-        <div class="site-footer_farm_image"><img src="/assets/images/resources/site-footer-farm.png"
-                                                 alt="Farm Image"></div>
+  <div>
+    <footer class="site-footer">
+      <img src="/assets/images/shapes/footer-shape-1.png" class="site-footer__shape-1" alt="">
+      <img src="/assets/images/shapes/footer-shape-2.png" class="site-footer__shape-2" alt="">
+      <img src="/assets/images/shapes/footer-shape-3.png" class="site-footer__shape-3" alt="">
+      <div class="site-footer__upper">
         <div class="container">
-          <div class="row no-gutters">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="footer-widget__column footer-widget__about wow fadeInUp" data-wow-delay="100ms">
-                <div class="footer-widget__title">
-                  <h3>HAVEVAとは</h3>
-                </div>
-                <div class="footer-widget_about_text">
-                  <p>have (持つ) ＋ ever (永遠に) で、HAVEVA。<br>大切な故人様・愛犬愛猫様への想いを骨壷に込め、そして魂の絆が永続しますように。<br>HAVEVAはお客様のあらゆるニーズにお答えできる、骨壷を取り揃えております。</p>
-                </div>
-                <!-- <form>
-                  <div class="footer_input-box">
-                    <input type="Email" placeholder="メールアドレス">
-                    <button type="submit" class="button"><i class="fa fa-check"></i></button>
-                  </div>
-                </form> -->
-              </div>
-            </div>
-            <!-- <div class="col-xl-2 col-lg-2 col-md-6">
-              <div class="footer-widget__column footer-widget__link wow fadeInUp" data-wow-delay="200ms">
-                <div class="footer-widget__title">
-                  <h3>Explore</h3>
-                </div>
-                <ul class="footer-widget__links-list list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Our Projects</a></li>
-                  <li><a href="#">Meet the Farmers</a></li>
-                  <li><a href="#">Latest News</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </div>
-            </div> -->
-            <!-- <div class="col-xl-3 col-lg-3 col-md-6">
-              <div class="footer-widget__column footer-widget__news wow fadeInUp" data-wow-delay="300ms">
-                <div class="footer-widget__title">
-                  <h3>News</h3>
-                </div>
-                <ul class="footer-widget__news list-unstyled">
-                  <li>
-                    <div class="footer-widget__news_image">
-                      <img src="/assets/images/resources/footer-1-img-1.jpg" alt="">
-                    </div>
-                    <div class="footer-widget__news_text">
-                      <p><a href="/news_detail"> Learn 10 Best Tips for New Formers</a></p>
-                    </div>
-                    <div class="footer-widget__news_date_box">
-                      <p>30 Oct, 2020</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="footer-widget__news_image">
-                      <img src="/assets/images/resources/footer-1-img-2.jpg" alt="">
-                    </div>
-                    <div class="footer-widget__news_text">
-                      <p><a href="/news_detail">Farmer Sentiment Darkens Hopes Fade</a></p>
-                    </div>
-                    <div class="footer-widget__news_date_box">
-                      <p>30 Oct, 2020</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div> -->
-            <div class="col-xl-3 col-lg-3 col-md-6">
-              <div class="footer-widget__column footer-widget__contact wow fadeInUp" data-wow-delay="400ms">
-                <div class="footer-widget__title">
-                  <h3>Contact</h3>
-                </div>
-                <div class="footer-widget_contact">
-                  <p>埼玉県飯能市本町</p>
-                  <a href="mailto:needhelp@agrikol.com">needhelp@agrikol.com</a><br>
-                  <a href="tel:666-888-0000">666 888 0000</a>
-                  <!-- <div class="site-footer__social">
-                    <a href="#"><i class="fab fa-facebook-square"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                  </div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      <div class="site-footer_bottom">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="footer-widget footer-widget__about">
+                <a class="footer-widget__logo" href="/"><img src="/assets/images/高谷の昌志.png" width="105" alt="Awesome Image" /></a>
+                <p>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>ビジネス得意科目は、IT・EC物流・英語。 </p>
+                <p><a href="mailto:needhelp@zimed.com">takayanomasashi@gmail.com</a> <br /> 
+                <!-- <a href="tel:666-888-0000">080-8431-0446</a> -->
+                </p>
+              </div><!-- /.footer-widget -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <!-- <div class="footer-widget footer-widget__links"> -->
+                <!-- <h3 class="footer-widget__title">Explorer</h3>
+                <div class="footer-widget__links-wrap">
+                  <ul class="list-unstyled">
+                    <li><a href="#">自己紹介</a></li>
+                    <li><a href="#">商品特徴</a></li> -->
+                    <!--<li><a href="#">サービスについて</a></li> -->
+                    <!-- <li><a href="#">最新ブログ</a></li> -->
+                  <!-- </ul>/.list-unstyled -->
+                  <!-- <ul class="list-unstyled"> -->
+                    <!-- <li><a href="#">ヘルプ</a></li>
+                    <li><a href="#">サポート</a></li> -->
+                    <!-- <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">利用規約</a></li>
+                  </ul>/.list-unstyled -->
+                <!-- </div>/.footer-widget__links-wrap -->
+              <!-- </div>/.footer-widget footer-widget__links -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+              <div class="footer-widget footer-widget__subscribe">
+                <!--<h3 class="footer-widget__title">サブスクライブ</h3>
+                <form class="footer-widget__mc-form mc-form" data-url="">
+                  <input type="text" name="email" placeholder="Eメールアドレス">
+                  <button type="submit" class="thm-btn footer-widget__mc-btn">無料登録</button>
+                </form>
+                <div class="mc-form__response"></div>--><!-- /.mc-form__response -->
+              </div><!-- /.footer-widget footer-widget__subscribe -->
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.site-footer__upper -->
+      <div class="site-footer__bottom">
         <div class="container">
-          <div class="site-footer_bottom_copyright">
-            <p>@ All copyright 2021, <a href="#">Haveva.com</a></p>
-          </div>
-          <div class="site-footer_bottom_menu">
-            <ul class="list-unstyled">
-              <li><a href="#">プライバシーポリシー</a></li>
-              <li><a href="#">利用規約</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+          <div class="inner-container">
+            <div class="site-footer__social">
+             <!-- <a class="fab fa-facebook-f" href="#"></a> -->
+              <!-- <a class="fab fa-twitter" href="https://twitter.com/masashi_d2c"></a> -->
+              <a class="fab fa-instagram" target="_blank" href="https://www.instagram.com/takayanomasashi/"></a>
+             <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
+            </div><!-- /.site-footer__social -->
+            <p>© copyright 2022 by 高谷の昌志</p>
+          </div><!-- /.inner-container -->
+        </div><!-- /.container -->
+      </div><!-- /.site-footer__bottom -->
+    </footer>
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
-      <a @click="scrollTop" href="#" class="scroll-to-target scroll-to-top" :style="`display: ${scrollBtn ? 'block' : 'none'}`"><i class="fa fa-angle-up"></i></a>
+    <div class="side-menu__block">
 
+
+      <div class="side-menu__block-overlay custom-cursor__overlay">
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+      </div><!-- /.side-menu__block-overlay -->
+      <div class="side-menu__block-inner ">
+        <div class="side-menu__top justify-content-end">
+
+          <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/shapes/close-1-1.png" alt=""></a>
+        </div><!-- /.side-menu__top -->
+
+
+        <nav class="mobile-nav__container">
+          <!-- content is loading via js -->
+        </nav>
+        <div class="side-menu__sep"></div><!-- /.side-menu__sep -->
+        <div class="side-menu__content">
+          <p> </p>
+          <p><a href="mailto:takayanomasashi@gmail.com">takayanomasashi@gmail.com</a> 
+          <br> 
+          <!-- <a href="tel:888-999-0000">080-8431-0446</a> -->
+          </p>
+          <div class="side-menu__social">
+            <!-- <a class="fab fa-facebook-f" href="#"></a> -->
+            <!-- <a class="fab fa-twitter" href="#"></a> -->
+            <a class="fab fa-instagram" href="https://www.instagram.com/takayanomasashi/"></a>
+            <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
+          </div>
+        </div><!-- /.side-menu__content -->
+      </div><!-- /.side-menu__block-inner -->
     </div>
+
+  </div>
 </template>
 
 <script>
     export default {
-      name: "Footer",
-      data(){
-        return {
-          scrollBtn: false
-        }
-      },
-      mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-      },
-
-      methods: {
-
-        handleScroll () {
-
-          if (window.scrollY > 70) {
-            this.scrollBtn = true
-          }
-          else if (window.scrollY < 70) {
-            this.scrollBtn = false
-          }
-        },
-
-        scrollTop () {
-          window.scrollTo(0, 0);
-        }
-
-      }
+      name: "Footer"
     }
 </script>
 

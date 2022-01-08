@@ -14,20 +14,20 @@ export default {
     return {
       boxes: [
         {
-          icon: "/icon-package.svg",
-          heading: "全世界送料無料",
-          details: "最大４日"
+          icon: "/Food Truck.H03.2k.png",
+          heading: "送料お客様負担",
+          details: "最大７日"
         },
         {
-          icon: "/icon-cal.svg",
-          heading: "２４/７ カスタマーサービス",
-          details: "いつでもお電話承ります"
+          icon: "/Icon 24 Hour Time.H03.2k.png",
+          heading: "メールサービス",
+          details: "いつでもご連絡承ります"
         },
-        {
-          icon: "/icon-service.svg",
-          heading: "返品簡単対応",
-          details: "ご注文から30日以内"
-        }
+        // {
+        //   icon: "/icon-service.svg",
+        //   heading: "返品対応不可",
+        //   details: "ご注文から30日以内"
+        // }
       ]
     };
   }
