@@ -64,6 +64,7 @@ export default {
   //   }
   // },
   async asyncData({ $config }) {
+    try {
     const blog = await axios.get(
       `${$config.apiUrl}/blog?limit=3&filters=flag[equals]true`,
       {
@@ -76,6 +77,12 @@ export default {
     return {
       blogItems: blog.data.contents,
       //infoItems: info.data.contents,
+    };
+    } catch (err) {
+      error({
+        statusCode: err.response.status,
+        message: err.response.data.message,
+      });
     }
   },
   head() {
