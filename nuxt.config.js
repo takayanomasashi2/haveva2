@@ -130,16 +130,16 @@ export default {
   generate: {
     fallback: true,
     routes() {
-      const menu = axios
-        .get(`${process.env.API_URL}/menu`, {
+      const blog = axios
+        .get(`${process.env.API_URL}/blog`, {
           headers: { 'X-MICROCMS-API-KEY': process.env.API_KEY },
         })
         .then((res) => {
-          return res.data.contents.map((menu) => {
-            return '/menu/' + menu.id
+          return res.data.contents.map((blog) => {
+            return '/blog/' + blog.id
           })
         })
-      return Promise.all([menu]).then((values) => {
+      return Promise.all([blog]).then((values) => {
         return values.join().split(',')
       })
     },
