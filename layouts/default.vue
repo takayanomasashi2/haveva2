@@ -16,7 +16,7 @@
     },
     head(){
       return {
-        title: "高谷の昌志"
+        title: "MASASHI"
       }
     },
     mounted() {

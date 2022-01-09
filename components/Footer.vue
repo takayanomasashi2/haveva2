@@ -9,7 +9,7 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="footer-widget footer-widget__about">
-                <a class="footer-widget__logo" href="/"><img src="/assets/images/高谷の昌志.png" width="105" alt="Awesome Image" /></a>
+                <a class="footer-widget__logo" href="/"><img src="/assets/images/logo.png" width="105" alt="Awesome Image" /></a>
                 <p>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>ビジネス得意科目は、IT・EC物流・英語。 </p>
                 <p><a href="mailto:needhelp@zimed.com">takayanomasashi@gmail.com</a> <br /> 
                 <!-- <a href="tel:666-888-0000">080-8431-0446</a> -->
@@ -58,7 +58,7 @@
               <a class="fab fa-instagram" target="_blank" href="https://www.instagram.com/takayanomasashi/"></a>
              <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
             </div><!-- /.site-footer__social -->
-            <p>© copyright 2022 by 高谷の昌志</p>
+            <p>© copyright 2022 by MASASHI</p>
           </div><!-- /.inner-container -->
         </div><!-- /.container -->
       </div><!-- /.site-footer__bottom -->
