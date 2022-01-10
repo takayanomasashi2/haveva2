@@ -22,7 +22,7 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="main-nav__main-navigation">
             <ul class="one-page-scroll-menu main-nav__navigation-box">
-              <li class="current scrollToLink">
+              <li class="scrollToLink ">
                 <a href="/">ホーム</a>
               </li>
               <!-- <li class="scrollToLink">

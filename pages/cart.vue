@@ -64,4 +64,8 @@ export default {
 .success {
   text-align: center;
 }
+
+a:hover {
+  color: white;
+}
 </style>
