@@ -5,8 +5,8 @@
     <img src="/assets/images/shapes/contact-shape-3.png" alt="" class="contact-one__shape-3"> -->
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="contact-one__content">
+        <!-- <div class="col-lg-6"> -->
+          <!-- <div class="contact-one__content"> -->
             <!-- <div class="contact-one__images"> -->
               <!-- <img src="/assets/images/resources/CIMG0130.JPG" class="wow fadeInUp" data-wow-duration="1500ms" alt=""> -->
               <!-- <img src="/assets/images/resources/IMG_2523.jpg" class="wow fadeInUp" data-wow-duration="1500ms" alt=""> -->
@@ -43,13 +43,14 @@
           <!-- </div>/.contact-one__content -->
         <!-- </div> -->
         <!-- /.col-lg-6 -->
-        <!-- <div class="col-lg-6"> -->
-          <!-- <div class="contact-one__form-wrap"> -->
-            <!-- <div class="block-title"> -->
-              <!-- <span class="block-title__bubbles"></span> -->
-              <!-- <p>コンタクト</p> -->
-              <!-- <h3>メッセージを書く</h3> -->
-            <!-- </div>/.block-title -->
+        <div class="col-lg-6">
+          <div class="contact-one__form-wrap">
+            <div class="block-title">
+              <span class="block-title__bubbles"></span>
+              <p>コンタクト</p>
+              <h3>メッセージを書く</h3>
+            </div>
+            <!-- /.block-title -->
 
   <div class="p-contact contact-one__form">
     <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="onSubmit" :class="sendingClass"> -->
