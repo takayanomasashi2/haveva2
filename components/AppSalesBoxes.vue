@@ -16,7 +16,7 @@ export default {
         {
           icon: "/Food Truck.H03.2k.png",
           heading: "送料お客様負担",
-          details: "最大７日"
+          details: "最大20日"
         },
         {
           icon: "/Icon 24 Hour Time.H03.2k.png",

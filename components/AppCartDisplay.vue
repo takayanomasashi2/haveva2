@@ -49,7 +49,7 @@
             <p>
               <strong>{{ cartTotal | dollar }}</strong>
             </p>
-            <p>無料</p>
+            <p>お客様負担</p>
             <p class="golden">{{ cartTotal | dollar }}</p>
           </div>
         </div>

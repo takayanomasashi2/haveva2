@@ -1,54 +1,55 @@
 <template>
   <section class="contact-one" id="contact">
     <!-- <img src="/assets/images/shapes/contact-shape-1.png" alt="" class="contact-one__shape-1"> -->
-    <img src="/assets/images/shapes/contact-shape-2.png" alt="" class="contact-one__shape-2">
-    <img src="/assets/images/shapes/contact-shape-3.png" alt="" class="contact-one__shape-3">
+    <!-- <img src="/assets/images/shapes/contact-shape-2.png" alt="" class="contact-one__shape-2">
+    <img src="/assets/images/shapes/contact-shape-3.png" alt="" class="contact-one__shape-3"> -->
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="contact-one__content">
-            <div class="contact-one__images">
-              <img src="/assets/images/resources/CIMG0130.JPG" class="wow fadeInUp" data-wow-duration="1500ms" alt="">
+            <!-- <div class="contact-one__images"> -->
+              <!-- <img src="/assets/images/resources/CIMG0130.JPG" class="wow fadeInUp" data-wow-duration="1500ms" alt=""> -->
               <!-- <img src="/assets/images/resources/IMG_2523.jpg" class="wow fadeInUp" data-wow-duration="1500ms" alt=""> -->
-            </div><!-- /.contact-one__images -->
-            <div class="contact-one__infos">
-              <div class="contact-one__infos-single">
-                <div class="contact-one__infos-icon">
-                  <i class="zimed-icon-placeholder"></i>
-                </div><!-- /.contact-one__infos-icon -->
-                <div class="contact-one__infos-content">
-                  <h3>住所</h3>
-                  <p>東京都江東区有明 <br> 日本 </p>
-                </div><!-- /.contact-one__infos-content -->
-              </div><!-- /.contact-one__infos-single -->
-              <div class="contact-one__infos-single">
-                <div class="contact-one__infos-icon">
-                  <i class="zimed-icon-message"></i>
-                </div><!-- /.contact-one__infos-icon -->
-                <div class="contact-one__infos-content">
-                  <h3>Eメール</h3>
-                  <p><a href="mailto:masayatakashi@gmail.com">masayatakashi@gmail.com</a></p>
-                </div><!-- /.contact-one__infos-content -->
-              </div><!-- /.contact-one__infos-single -->
-              <div class="contact-one__infos-single">
-                <div class="contact-one__infos-icon">
-                  <i class="zimed-icon-phone-call"></i>
-                </div><!-- /.contact-one__infos-icon -->
-                <div class="contact-one__infos-content">
-                  <h3>Phone</h3>
-                  <p><a href="tel:666-888-0000">080-8431-0446</a></p>
-                </div><!-- /.contact-one__infos-content -->
-              </div><!-- /.contact-one__infos-single -->
-            </div><!-- /.contact-one__infos -->
-          </div><!-- /.contact-one__content -->
-        </div><!-- /.col-lg-6 -->
-        <div class="col-lg-6">
-          <div class="contact-one__form-wrap">
-            <div class="block-title">
-              <span class="block-title__bubbles"></span>
-              <p>コンタクト</p>
-              <h3>メッセージを書く</h3>
-            </div><!-- /.block-title -->
+            <!-- </div>/.contact-one__images -->
+            <!-- <div class="contact-one__infos"> -->
+              <!-- <div class="contact-one__infos-single"> -->
+                <!-- <div class="contact-one__infos-icon"> -->
+                  <!-- <i class="zimed-icon-placeholder"></i> -->
+                <!-- </div>/.contact-one__infos-icon -->
+                <!-- <div class="contact-one__infos-content"> -->
+                  <!-- <h3>住所</h3>
+                  <p>東京都江東区有明 <br> 日本 </p> -->
+                <!-- </div>/.contact-one__infos-content -->
+              <!-- </div>/.contact-one__infos-single -->
+              <!-- <div class="contact-one__infos-single"> -->
+                <!-- <div class="contact-one__infos-icon"> -->
+                  <!-- <i class="zimed-icon-message"></i> -->
+                <!-- </div>/.contact-one__infos-icon -->
+                <!-- <div class="contact-one__infos-content"> -->
+                  <!-- <h3>Eメール</h3> -->
+                  <!-- <p><a href="mailto:masayatakashi@gmail.com">masayatakashi@gmail.com</a></p> -->
+                <!-- </div>/.contact-one__infos-content -->
+              <!-- </div>/.contact-one__infos-single -->
+              <!-- <div class="contact-one__infos-single"> -->
+                <!-- <div class="contact-one__infos-icon"> -->
+                  <!-- <i class="zimed-icon-phone-call"></i> -->
+                <!-- </div>/.contact-one__infos-icon -->
+                <!-- <div class="contact-one__infos-content"> -->
+                  <!-- <h3>Phone</h3> -->
+                  <!-- <p><a href="tel:666-888-0000">080-8431-0446</a></p> -->
+                <!-- </div>/.contact-one__infos-content -->
+              <!-- </div>/.contact-one__infos-single -->
+            <!-- </div>/.contact-one__infos -->
+          <!-- </div>/.contact-one__content -->
+        <!-- </div> -->
+        <!-- /.col-lg-6 -->
+        <!-- <div class="col-lg-6"> -->
+          <!-- <div class="contact-one__form-wrap"> -->
+            <!-- <div class="block-title"> -->
+              <!-- <span class="block-title__bubbles"></span> -->
+              <!-- <p>コンタクト</p> -->
+              <!-- <h3>メッセージを書く</h3> -->
+            <!-- </div>/.block-title -->
 
   <div class="p-contact contact-one__form">
     <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="onSubmit" :class="sendingClass"> -->

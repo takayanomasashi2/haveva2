@@ -3,24 +3,24 @@
     <div v-if="cartUIStatus === 'idle'" class="payment">
       <h3>お支払い情報</h3>
       <label for="email">Eメール</label>
-      <br />
+      <!-- <br />
       <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
-      <br />
-      <label for="card">クレジットカード</label>
-      <br />
-      <small>
+      <br /> -->
+      <!-- <label for="card">クレジットカード</label>
+      <br /> -->
+      <!-- <small>
         任意のCVC、郵便番号、有効期限のStripeテストクレジットカード番号を使用し、テストできます。:
         <ul>
           <li>
             <span class="cc-number">4242 4242 4242 4242</span>
-          </li>
+          </li> -->
           <!-- <li>
             <span class="cc-number">4000 0027 6000 3184</span> (requires authentication, will trigger a pop-up)
           </li>
           <li>
             <span class="cc-number">4000 0000 0000 9995</span> (will decline with a decline code of insufficient funds)
           </li> -->
-        </ul>
+        <!-- </ul>
       </small>
       <card
         class="stripe-card"
@@ -30,12 +30,14 @@
         :options="stripeOptions"
         @change="complete = $event.complete"
       />
-      <small class="card-error">{{error}}</small>
-      <button
+      <small class="card-error">{{error}}</small> -->
+      <!-- <button
         class="pay-with-stripe button"
         @click="pay"
-        :disabled="!complete || !stripeEmail || loading"
-      >クレジットカードで支払う</button>
+        :disabled="!stripeEmail || loading"
+      >コミットする</button> -->
+      <!-- :disabled="!complete || !stripeEmail || loading" -->
+      <contact />
     </div>
 
     <div v-else class="statussubmit">
@@ -62,8 +64,10 @@ import { Card, handleCardPayment } from "vue-stripe-elements-plus";
 
 import { mapState } from "vuex";
 
+import  Contact from "~/components/Contact.vue";
+
 export default {
-  components: { Card },
+  components: { Card,Contact },
   computed: {
     ...mapState(["cartUIStatus"])
   },
