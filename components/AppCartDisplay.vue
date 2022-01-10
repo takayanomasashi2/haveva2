@@ -58,7 +58,7 @@
 
     <section v-else class="center">
       <p>まだカートに商品が入っていません。</p>
-      <button class="pay-with-stripe">
+      <button class="pay-with-stripe thm-btn">
         <!-- <nuxt-link exact to="/">ホームに戻る</nuxt-link> -->
         <a href="/">ホームに戻る</a>
       </button>
@@ -125,7 +125,7 @@ th {
 }
 
 .golden {
-  background: #f2eee2;
+  background: #e6effd;
   font-weight: bold;
   padding: 10px;
 }

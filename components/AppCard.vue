@@ -1,8 +1,82 @@
 <template>
   <div id="app">
     <div v-if="cartUIStatus === 'idle'" class="payment">
-      <h3>お支払い情報</h3>
-      <label for="email">Eメール</label>
+      <h3>お客様情報</h3>
+        <div class="p-contact contact-one__form">
+          <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="onSubmit" :class="sendingClass"> -->
+          <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks">
+            <input type="hidden" name="form-name" value="contact">
+            <div class="row">
+              <div class="p-contact__item col-md-6">
+                <!-- <label for="username" style="visibility:hidden">お名前</label> -->
+                <validation-provider v-slot="{ errors }" rules="required|max:100" name="お名前">
+                  <input type="text" id="username" name="username" v-model="username" autocomplete="name" placeholder="お名前">
+                  <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
+                </validation-provider>
+              </div>
+              <!-- /.p-contact__item -->
+              <div class="p-contact__item col-md-6">
+                <!-- <label for="useremail" style="visibility:hidden">メールアドレス</label> -->
+                <validation-provider v-slot="{ errors }" rules="required|email|max:256" name="メールアドレス">
+                  <input type="text" id="useremail" name="useremail" v-model="useremail" autocomplete="email" placeholder="メールアドレス">
+                  <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
+                </validation-provider>
+              </div>
+              <!-- /.p-contact__item -->
+              <div class="p-contact__item col-md-6">
+                <!-- <label for="kenmei" style="visibility:hidden">件名</label> -->
+                <validation-provider v-slot="{ errors }" rules="required|max:100" name="電話番号">
+                  <input type="text" id="phone" name="phone" v-model="phone" autocomplete="phone" placeholder="電話番号">
+                  <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
+                </validation-provider>
+              </div>
+              <!-- /.p-contact__item -->
+              <div class="p-contact__item col-md-6">
+                <!-- <label for="kenmei" style="visibility:hidden">件名</label> -->
+                <validation-provider v-slot="{ errors }" rules="required|max:100" name="郵便番号">
+                  <input type="text" id="kenmei" name="kenmei" v-model="zipCode" placeholder="郵便番号">
+                  <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
+                </validation-provider>
+              </div>
+              <!-- <label>郵便番号<input v-model="zipCode" type="input" /></label> -->
+  <!-- <label>住所<input v-model="address" type="input" /></label> -->
+              <!-- /.p-contact__item -->
+              <!-- <div class="p-contact__item col-md-6"> -->
+                <!-- <label for="topic" style="visibility:hidden">トピック</label> -->
+                <!-- <validation-provider v-slot="{ errors }" rules="" name="トピック"> -->
+                <!-- <input type="text" id="topic" name="topic" v-model="topic" placeholder="トピック"> -->
+                <!-- <select id="topic" name="topic" v-model="topic" class="selectpicker">
+                  <option value="トピック" selected>トピック</option>
+                  <option value="無料トライアル">無料トライアル</option>
+                  <option value="ビジネス上の質問">ビジネス上の質問</option>
+                </select> -->
+                <!-- <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p> -->
+                <!-- </validation-provider> -->
+              <!-- </div> -->
+              <!-- /.p-contact__item -->
+              <div class="p-contact__item col-md-12">
+                <!-- <label for="message" style="visibility:hidden">ご住所</label> -->
+                <validation-provider v-slot="{ errors }" rules="required|max:1000" name="ご住所">
+                  <textarea id="message" name="message" v-model="address" placeholder="ご住所"></textarea>
+                  <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
+                </validation-provider>
+              </div>
+              <!-- /.p-contact__item -->
+            </div>
+            <div class="p-contact__item" v-show="false">
+              <!-- <label for="message">スパムでない場合は空欄</label> -->
+              <input type="text" name="bot-field" v-model="botField">
+            </div>
+            <!-- /.p-contact__item -->
+            <div class="p-contact__submit">
+              <button type="submit" class="thm-btn" :disabled="invalid || !validated">送信</button>
+            </div>
+            <!-- /.p-contact__submit -->
+          </validation-observer>
+          <!-- /.p-contact__form -->
+        </div>
+        <div class="result"></div>
+      <!-- <label for="email">Eメール</label> -->
       <!-- <br />
       <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
       <br /> -->
@@ -37,7 +111,7 @@
         :disabled="!stripeEmail || loading"
       >コミットする</button> -->
       <!-- :disabled="!complete || !stripeEmail || loading" -->
-      <contact />
+      <!-- <contact /> -->
     </div>
 
     <div v-else class="statussubmit">
@@ -69,7 +143,14 @@ import  Contact from "~/components/Contact.vue";
 export default {
   components: { Card,Contact },
   computed: {
-    ...mapState(["cartUIStatus"])
+    ...mapState(["cartUIStatus"]),
+    sendingClass(){
+        return {
+          'is-sending'  : this.isSending,
+          'is-error'    : this.isError,
+          'is-complete' : this.isSubmit
+        };
+      }
   },
   mounted() {
     // create a PaymentIntent on Stripe with order information
@@ -84,7 +165,17 @@ export default {
       },
       stripeEmail: "",
       error: "",
-      loading: false
+      loading: false,
+
+      username        : '',
+      useremail       : '',
+      botField        : '',
+      isSubmit        : false,
+      isSending       : false,
+      isError         : false,
+      completeMessage : '',
+      zipCode: "",
+      address: "",
     };
   },
   methods: {
@@ -119,8 +210,57 @@ export default {
     clearCart() {
       this.complete = false;
       this.$store.commit("clearCart");
-    }
-  }
+    },
+    onSubmit() {
+        if(this.isSending){
+          return;
+        }
+        this.isSending = true;
+        this.completeMessage = '送信処理中…';
+        const params = new URLSearchParams();
+        params.append('form-name', 'contact');
+        params.append('username', this.username);
+        params.append('kenmei', this.kenmei);
+        params.append('useremail', this.useremail);
+        params.append('topic', this.topic);
+        params.append('message', this.message);
+        if(this.botField){
+          params.append('bot-field', this.botField);
+        }
+        // console.log(params)
+        this.$axios
+        .$post('/', params)
+        .then(() => {
+          this.completeMessage = 'お問い合わせを送信しました！';
+          this.resetForm();
+          this.isSubmit  = true;
+        })
+        .catch(err => {
+          this.completeMessage = 'お問い合わせの送信が失敗しました';
+          this.isError   = true;
+        })
+        .finally(() => {
+          this.isSending = false;
+        });
+      },
+
+      resetForm() {
+        this.username        = '';
+        this.kenmei        = '';
+        this.useremail       = '';
+        this.topic       = 1;
+        this.message         = '';
+        this.isError         = false;
+        this.$refs.observer.reset();
+      }
+  },
+  watch: {
+    zipCode(zipCode) {
+      this.$yubinbango(zipCode).then(
+        (addr) => (this.address = addr.locality + addr.street)
+      );
+    },
+  },
 };
 </script> 
  

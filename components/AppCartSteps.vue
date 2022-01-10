@@ -52,7 +52,8 @@ h2 {
   padding-top: 21px;
   color: #555;
   &.active {
-    background: #d96528;
+    background: linear-gradient(90deg, #e41256 0%, #ffa337 51%, #e41256 100%);
+    background-size: 200% auto;
     border: 1px solid #d96528;
     color: white;
   }

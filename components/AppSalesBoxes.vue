@@ -20,8 +20,8 @@ export default {
         },
         {
           icon: "/Icon 24 Hour Time.H03.2k.png",
-          heading: "メールサービス",
-          details: "いつでもご連絡承ります"
+          heading: "カスタマーサービス",
+          details: "いつでもメール連絡承ります"
         },
         // {
         //   icon: "/icon-service.svg",

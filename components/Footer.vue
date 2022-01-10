@@ -75,7 +75,7 @@
       <div class="side-menu__block-inner ">
         <div class="side-menu__top justify-content-end">
 
-          <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="assets/images/shapes/close-1-1.png" alt=""></a>
+          <a href="#" class="side-menu__toggler side-menu__close-btn"><img src="/assets/images/shapes/close-1-1.png" alt=""></a>
         </div><!-- /.side-menu__top -->
 
 

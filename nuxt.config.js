@@ -10,6 +10,7 @@ const { API_KEY, API_URL, BASE_URL,SERVICE_ID } = process.env
 
 export default {
   mode: 'universal',
+  // ssr: 'true',
   /*
    ** Headers of the page
    */
@@ -37,6 +38,7 @@ export default {
     { src: "/assets/js/jquery.bxslider.min.js", type: "text/javascript", body: true },
     { src: "/assets/js/jquery.magnific-popup.min.js", type: "text/javascript", body: true },
     { src: "/assets/js/jquery.ajaxchimp.min.js", type: "text/javascript", body: true },
+    { src: "https://yubinbango.github.io/yubinbango-core/yubinbango-core.js" },
   
   ],
     meta: [
@@ -56,7 +58,6 @@ export default {
       { rel: 'icon', sizes:'32x32', type: 'image/png', href: '/assets/images/favicons/favicon-32x32.png' },
       { rel: 'icon', sizes:'16x16', type: 'image/png', href: '/assets/images/favicons/favicon-16x16.png' },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600&display=swap" },
-      // { rel: "stylesheet", href: "/assets/css/bootstrap.min.css" },
       { rel: "stylesheet", href: "/assets/css/bootstrap-datepicker.min.css" },
       { rel: "stylesheet", href: "/assets/css/vegas.min.css" },
       { rel: "stylesheet", href: "/assets/css/animate.min.css" },
@@ -105,7 +106,10 @@ export default {
    */
   plugins: [
     {src: 'plugins/owl.js', ssr: false},
-    `~/plugins/currency-filter.js`
+    `~/plugins/currency-filter.js`,
+    '~/plugins/filter.js',
+    '~/plugins/vee-validate',
+    '~/plugins/yubinbango.js'
     ],
   /*
    ** Nuxt.js modules
@@ -125,6 +129,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    transpile: ['vee-validate'], // 追加
     extend(config, ctx) {}
   },
   generate: {
@@ -150,5 +155,5 @@ export default {
   privateRuntimeConfig: {
     apiKey: API_KEY
   },
-  target: 'serverless',
+  // target: 'serverless',
 }

@@ -38,7 +38,7 @@
           </strong>
         </p> -->
         <p>
-          <button class="button purchase" @click="cartAdd">カートに入れる</button>
+          <button class="thm-btn" @click="cartAdd">カートに入れる</button>
         </p>
       </section>
     </section>

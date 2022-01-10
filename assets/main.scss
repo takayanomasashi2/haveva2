@@ -1,6 +1,6 @@
 /*------------ Variables -----------*/
 
-$brandprimary: #d96528;
+$brandprimary: black;
 $brandsecondary: #FFFFFF;
 
 /*------------  Global   -----------*/
@@ -62,22 +62,22 @@ p {
 //   transition: 0.3s all ease;
 // }
 
-button {
-  border: 1px solid #ccc;
-  background: white;
-  padding: 10px 14px;
-  cursor: pointer;
-  color: black;
-  font-weight: 700;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  transition: 0.3s all ease;
-  &:hover {
-    background: black;
-    border: 1px solid black;
-    color: white;
-  }
-}
+// button {
+//   border: 1px solid #ccc;
+//   background: white;
+//   padding: 10px 14px;
+//   cursor: pointer;
+//   color: black;
+//   font-weight: 700;
+//   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+//     Roboto, "Helvetica Neue", Arial, sans-serif;
+//   transition: 0.3s all ease;
+//   &:hover {
+//     background: black;
+//     border: 1px solid black;
+//     color: white;
+//   }
+// }
 
 button.purchase {
   background: $brandprimary;
@@ -89,20 +89,20 @@ button.purchase {
   }
 }
 
-button.pay-with-stripe {
-  background: black;
-  color: white;
-  font-size: 16px;
-  border: none;
+// button.pay-with-stripe {
+//   background: black;
+//   color: white;
+//   font-size: 16px;
+//   border: none;
 
-  &:hover {
-    background: #c14103;
-  }
+//   &:hover {
+//     background: #c14103;
+//   }
 
-  &:disabled {
-    background: #999;
-  }
-}
+//   &:disabled {
+//     background: #999;
+//   }
+// }
 
 .price {
   color: $brandprimary;
