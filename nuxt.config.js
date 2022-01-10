@@ -9,8 +9,8 @@ const axios = require('axios')
 const { API_KEY, API_URL, BASE_URL,SERVICE_ID } = process.env
 
 export default {
-  mode: 'universal',
-  // ssr: 'true',
+  // mode: 'universal',
+  ssr: 'true',
   /*
    ** Headers of the page
    */
