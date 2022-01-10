@@ -16,7 +16,7 @@
     },
     head(){
       return {
-        title: "MASASHI"
+        title: "MASASHI - ITエンジニア"
       }
     },
     mounted() {
