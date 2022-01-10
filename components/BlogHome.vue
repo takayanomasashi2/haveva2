@@ -15,9 +15,9 @@
           <a href="#"><i class="far fa-clock"></i>{{ price }}</a></li>
         <!-- <li><a href="#"><i class="far fa-comments"></i> 2 Comments</a></li> -->
       </ul>
-      <h3><a :href="'blog/' + id">{{ name }}</a>
+      <h3><a :href="'/blog/' + id">{{ name }}</a>
       </h3>
-      <a :href="'blog/' + id" class="blog-one__link"><i class="zimed-icon-right-arrow"></i></a>
+      <a :href="'/blog/' + id" class="blog-one__link"><i class="zimed-icon-right-arrow"></i></a>
       <!-- /.blog-one__link -->
     </div><!-- /.blog-one__content -->
   </div>

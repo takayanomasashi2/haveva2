@@ -25,7 +25,7 @@
           <h3>ニュース & 記事</h3>
         </div>
         <div class="row" data-v-1682312c>
-          <BlogHomeSecond
+          <BlogHome
             v-for="(item, index) in blogItems"
             :id="item.id"
             :key="index"
@@ -48,12 +48,12 @@
 <script>
 import axios from 'axios'
 import LayoutMenuList from "~/components/LayoutMenuList.vue";
-import BlogHomeSecond from "~/components/BlogHomeSecond.vue";
+import BlogHome from "~/components/BlogHome.vue";
 
 export default {
   components: {
     LayoutMenuList,
-    BlogHomeSecond,
+    BlogHome,
   },
   // async asyncData({ $config }) {
   //   const { data } = await axios.get(`${$config.apiUrl}/blog`, {

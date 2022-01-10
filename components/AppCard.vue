@@ -104,6 +104,7 @@ export default {
           // there's always a chance your customer closes the browser after the payment process and before this code runs so
           // we will use the webhook in handle-payment-succeeded for any business-critical post-payment actions
           this.$store.commit("updateCartUI", "success");
+          window.scroll({top: 0, behavior: 'smooth'});
           setTimeout(this.clearCart, 5000);
         } else {
           this.error = "Some unknown error occured";
