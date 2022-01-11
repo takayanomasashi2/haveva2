@@ -58,7 +58,7 @@
               <div class="p-contact__item col-md-12">
                 <!-- <label for="message" style="visibility:hidden">ご住所</label> -->
                 <validation-provider v-slot="{ errors }" rules="required|max:100" name="ご住所">
-                  <input id="address" name="ご住所" v-model="address" placeholder="ご住所">
+                  <input id="address" name="address" v-model="address" placeholder="ご住所">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
               </div>
