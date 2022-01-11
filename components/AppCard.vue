@@ -74,16 +74,6 @@
             </div>
             <!-- /.p-contact__submit -->
           </validation-observer>
-
-
-<form name="contact2" action="/contact/success/" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact2" />
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  ...
-</form>
-
           
           <!-- /.p-contact__form -->
         </div>

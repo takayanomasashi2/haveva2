@@ -5,7 +5,7 @@
         <img src="/assets/images/mocs/Happy Ghost Balloon.H02.2k.png" alt="" class="cta-three__moc">
         <div class="card">
             <div class="header">
-                <h3>ご注文<br>ありがとうございます!</h3>
+                <h3>ご注文<br>ありがとうございました!</h3>
             </div>
             <p>レシートメールを送信いたしました。</p>
             <p>
