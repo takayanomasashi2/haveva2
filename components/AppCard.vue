@@ -40,9 +40,9 @@
               </div>
               
               <!-- /.p-contact__item -->
-              <!-- <div class="p-contact__item col-md-12"> -->
-                <!-- <label for="message" style="visibility:hidden">ご住所</label> -->
-                <!-- <validation-provider v-slot="{ errors }" rules="required|max:100" name="ご住所">
+              <!-- <label for="message" style="visibility:hidden">ご住所</label> -->
+              <!-- <div class="p-contact__item col-md-12">
+                <validation-provider v-slot="{ errors }" rules="required|max:100" name="ご住所">
                   <input id="address" name="address" v-model="address" placeholder="ご住所">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
@@ -58,19 +58,8 @@
               <button type="submit" class="thm-btn" :disabled="invalid || !validated">送信</button>
             </div>
             <!-- /.p-contact__item -->
-            <ul name="address" >
-              <li v-for="item in cart" :key="item.id">
-                  {{ item.id }},{{ item.quantity }}
-              </li>
-            </ul>
-                  <!-- <span>Multiline message is:</span> -->
-<!-- <p style="white-space: pre-line;">{{ cart }} -->
-<!-- <textarea v-model="cart" v-bind:value="{id: cart.id}"></textarea> -->
-<!-- <p v-for="item in cart" :key="item.id">
-  {{ item.name }}
-  <input v-model="cart" v-bind:value="item">
-</p> -->
-                  
+            <textarea id="address" name="address" v-model=cart[0].name></textarea>
+            
             <!-- /.p-contact__submit -->
           </validation-observer>
           <!-- /.p-contact__form -->
@@ -144,7 +133,7 @@ import { mapState } from "vuex";
 // import  Contact from "~/components/Contact.vue";
 
 export default {
-  // props:["productid"],
+  // props :itemname=item.name,
   components: { Card },
   computed: {
     ...mapState(["cartUIStatus"]),
