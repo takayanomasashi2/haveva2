@@ -59,7 +59,8 @@
             </div>
             <!-- /.p-contact__item -->
             
-              <input id="address" name="address" v-for="item in cart" :key="item.id" v-bind:value="item.name">
+              <!-- <textarea id="address  " name="address" v-for="item in cart" :key="item.id" v-bind:value="item.name"></textarea> -->
+              <p id="address" name="address">{{ userName }}</p>
             
             
             <!-- /.p-contact__submit -->
@@ -135,7 +136,7 @@ import { mapState } from "vuex";
 // import  Contact from "~/components/Contact.vue";
 
 export default {
-  // props :itemname=item.name,
+  props: ['userName'],
   components: { Card },
   computed: {
     ...mapState(["cartUIStatus"]),

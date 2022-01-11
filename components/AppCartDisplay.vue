@@ -13,7 +13,7 @@
         <tr v-for="item in cart" :key="item.id">
           <td>
             <img :src="`/products/${item.img}`" :alt="item.name" class="product-img" />
-            <h3 class="product-name">{{ item.name }}</h3>
+            <h3 class="product-name">{{methodName(item.name,item.quantity)}}</h3>
             <h5 v-if="item.size" class="product-size">Size: {{ item.size }}</h5>
           </td>
           <td>
@@ -36,7 +36,7 @@
       </table>
 
       <section class="payment">
-        <app-card />
+        <app-card :userName=this.foo />
         <div class="total">
           <div class="caption">
             <p>
@@ -94,6 +94,9 @@ export default {
     },
     removeAllFromCart(item) {
       this.$store.commit("removeAllFromCart", item);
+    },
+    methodName: function(foo, bar) {
+      this.foo += "," +foo+"x"+bar ;
     }
   }
 };
