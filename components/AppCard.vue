@@ -58,7 +58,9 @@
               <button type="submit" class="thm-btn" :disabled="invalid || !validated">送信</button>
             </div>
             <!-- /.p-contact__item -->
-            <textarea id="address" name="address" v-model=cart[0].name></textarea>
+            
+              <input id="address" name="address" v-for="item in cart" :key="item.id" v-bind:value="item.name">
+            
             
             <!-- /.p-contact__submit -->
           </validation-observer>
