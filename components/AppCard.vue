@@ -76,30 +76,27 @@
           </validation-observer>
 
 
-<form action="" class="contact-form-validated contact-one__form" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass">
-              <div class="row">
-                <div class="col-md-6">
-                  <input type="text" name="name" placeholder="Name">
-                </div><!-- /.col-md-6 -->
-                <div class="col-md-6">
-                  <input type="text" name="email" placeholder="Email">
-                </div><!-- /.col-md-6 -->
-                <div class="col-md-6">
-                  <input type="text" name="subject" placeholder="Subject">
-                </div><!-- /.col-md-6 -->
-                <div class="col-md-6">
-                  <select name="discuss" class="selectpicker">
-                    <option value="">Discussion For</option>
-                    <option value="">Free Trial</option>
-                    <option value="">Busniess Inquery</option>
-                  </select>
-                </div><!-- /.col-md-6 -->
-                <div class="col-md-12">
-                  <textarea name="message" placeholder="Message"></textarea>
-                  <button type="submit" class="thm-btn contact-one__form-btn">Send Message</button>
-                </div><!-- /.col-md-12 -->
-              </div><!-- /.row -->
-            </form><!-- /.contact-one__form -->
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
 
 
           <!-- /.p-contact__form -->
