@@ -4,7 +4,9 @@
       <h3>お客様情報</h3>
         <div class="p-contact contact-one__form">
           <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="onSubmit" :class="sendingClass"> -->
-          <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks">
+          <form ref="observer" 
+           tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks">
+           <!-- v-slot="{ invalid, validated }" -->
             <input type="hidden" name="form-name" value="contact">
             <div class="row">
               <div class="p-contact__item col-md-4">
@@ -73,7 +75,7 @@
               <button type="submit" class="thm-btn" :disabled="invalid || !validated">送信</button>
             </div>
             <!-- /.p-contact__submit -->
-          </validation-observer>
+          </form>
           <!-- /.p-contact__form -->
         </div>
         <div class="result"></div>
