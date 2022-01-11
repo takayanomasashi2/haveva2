@@ -4,7 +4,7 @@
       <h3>お客様情報</h3>
         <div class="p-contact contact-one__form">
           <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="onSubmit" :class="sendingClass"> -->
-          <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks">
+          <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks/">
             <input type="hidden" name="form-name" value="contact">
             <div class="row">
               <div class="p-contact__item col-md-4">
@@ -76,12 +76,12 @@
           </validation-observer>
 
 
-<form
-      method="post"
-      name="membership-form" 
-      data-netlify="true"
-      >
-        <input type="hidden" name="form-name" value="membership-form" />
+<form name="contact2" action="/contact/success/" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact2" />
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  ...
 </form>
 
           
