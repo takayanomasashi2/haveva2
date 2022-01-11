@@ -23,7 +23,7 @@
               </div><!-- /.contact-one__infos-single -->
               <div class="contact-one__infos-single">
                 <div class="contact-one__infos-icon">
-                  <i class="zimed-icon-message"></i>
+                  <i class="zimed-icon-address"></i>
                 </div><!-- /.contact-one__infos-icon -->
                 <div class="contact-one__infos-content">
                   <h3>Eメール</h3>
@@ -74,19 +74,19 @@
       <!-- /.p-contact__item -->
 
       <div class="p-contact__item col-md-6">
-        <!-- <label for="kenmei" style="visibility:hidden">件名</label> -->
+        <!-- <label for="zipcode" style="visibility:hidden">件名</label> -->
         <validation-provider v-slot="{ errors }" rules="required|max:100" name="件名">
-          <input type="text" id="kenmei" name="kenmei" v-model="kenmei" placeholder="件名">
+          <input type="text" id="zipcode" name="zipcode" v-model="zipcode" placeholder="件名">
           <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
         </validation-provider>
       </div>
       <!-- /.p-contact__item -->
 
       <div class="p-contact__item col-md-6">
-        <!-- <label for="topic" style="visibility:hidden">トピック</label> -->
+        <!-- <label for="phone" style="visibility:hidden">トピック</label> -->
         <!-- <validation-provider v-slot="{ errors }" rules="" name="トピック"> -->
-          <!-- <input type="text" id="topic" name="topic" v-model="topic" placeholder="トピック"> -->
-          <select id="topic" name="topic" v-model="topic" class="selectpicker">
+          <!-- <input type="text" id="phone" name="phone" v-model="phone" placeholder="トピック"> -->
+          <select id="phone" name="phone" v-model="phone" class="selectpicker">
                     <option value="トピック" selected>トピック</option>
                     <option value="無料トライアル">無料トライアル</option>
                     <option value="ビジネス上の質問">ビジネス上の質問</option>
@@ -97,9 +97,9 @@
       <!-- /.p-contact__item -->
 
       <div class="p-contact__item col-md-12">
-        <!-- <label for="message" style="visibility:hidden">メッセージ</label> -->
+        <!-- <label for="address" style="visibility:hidden">メッセージ</label> -->
         <validation-provider v-slot="{ errors }" rules="required|max:1000" name="メッセージ">
-          <textarea id="message" name="message" v-model="message" placeholder="メッセージ"></textarea>
+          <textarea id="address" name="address" v-model="address" placeholder="メッセージ"></textarea>
           <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
         </validation-provider>
       </div>
@@ -107,7 +107,7 @@
       </div>
 
       <div class="p-contact__item" v-show="false">
-        <!-- <label for="message">スパムでない場合は空欄</label> -->
+        <!-- <label for="address">スパムでない場合は空欄</label> -->
         <input type="text" name="bot-field" v-model="botField"/>
       </div>
       <!-- /.p-contact__item -->
@@ -133,15 +133,15 @@
       data() {
       return {
         username        : '',
-        kenmei        : '',
         useremail       : '',
-        topic       : 'トピック',
-        message         : '',
+        zipcode        : '',
+        phone       : 'トピック',
+        address         : '',
         botField        : '',
         isSubmit        : false,
         isSending       : false,
         isError         : false,
-        completeMessage : '',
+        completeaddress : '',
       }
     },
     computed: {
@@ -159,14 +159,14 @@
           return;
         }
         this.isSending = true;
-        this.completeMessage = '送信処理中…';
+        this.completeaddress = '送信処理中…';
         const params = new URLSearchParams();
         params.append('form-name', 'contact');
         params.append('username', this.username);
-        params.append('kenmei', this.kenmei);
+        params.append('zipcode', this.zipcode);
         params.append('useremail', this.useremail);
-        params.append('topic', this.topic);
-        params.append('message', this.message);
+        params.append('phone', this.phone);
+        params.append('address', this.address);
         if(this.botField){
           params.append('bot-field', this.botField);
         }
@@ -174,12 +174,12 @@
         this.$axios
         .$post('/', params)
         .then(() => {
-          this.completeMessage = 'お問い合わせを送信しました！';
+          this.completeaddress = 'お問い合わせを送信しました！';
           this.resetForm();
           this.isSubmit  = true;
         })
         .catch(err => {
-          this.completeMessage = 'お問い合わせの送信が失敗しました';
+          this.completeaddress = 'お問い合わせの送信が失敗しました';
           this.isError   = true;
         })
         .finally(() => {
@@ -188,10 +188,10 @@
       },
       resetForm() {
         this.username        = '';
-        this.kenmei        = '';
+        this.zipcode        = '';
         this.useremail       = '';
-        this.topic       = 1;
-        this.message         = '';
+        this.phone       = 1;
+        this.address         = '';
         this.isError         = false;
         this.$refs.observer.reset();
       }
