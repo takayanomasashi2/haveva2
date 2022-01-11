@@ -17,7 +17,7 @@
 
         <section v-else-if="cartUIStatus === 'success'" class="success">
           <h2>サクセス!</h2>
-          <p>お買い上げ誠にありがとうございます。営業日数５日以内にお届けいたします。</p>
+          <p>お買い上げ誠にありがとうございます。営業日数14日以内にお届けいたします。</p>
           <p>お忘れ物はありませんか?</p>
           <button class="pay-with-stripe">
             <a href="/">ホームに戻る</a>

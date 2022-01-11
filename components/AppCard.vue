@@ -39,64 +39,65 @@
                 </validation-provider>
               </div>
               
-              <!-- <label>郵便番号<input v-model="zipCode" type="input" /></label> -->
-  <!-- <label>住所<input v-model="address" type="input" /></label> -->
               <!-- /.p-contact__item -->
-              <!-- <div class="p-contact__item col-md-6"> -->
-                <!-- <label for="topic" style="visibility:hidden">トピック</label> -->
-                <!-- <validation-provider v-slot="{ errors }" rules="" name="トピック"> -->
-                <!-- <input type="text" id="topic" name="topic" v-model="topic" placeholder="トピック"> -->
-                <!-- <select id="topic" name="topic" v-model="topic" class="selectpicker">
-                  <option value="トピック" selected>トピック</option>
-                  <option value="無料トライアル">無料トライアル</option>
-                  <option value="ビジネス上の質問">ビジネス上の質問</option>
-                </select> -->
-                <!-- <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p> -->
-                <!-- </validation-provider> -->
-              <!-- </div> -->
-              <!-- /.p-contact__item -->
-              <div class="p-contact__item col-md-12">
+              <!-- <div class="p-contact__item col-md-12"> -->
                 <!-- <label for="message" style="visibility:hidden">ご住所</label> -->
-                <validation-provider v-slot="{ errors }" rules="required|max:100" name="ご住所">
+                <!-- <validation-provider v-slot="{ errors }" rules="required|max:100" name="ご住所">
                   <input id="address" name="address" v-model="address" placeholder="ご住所">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
-              </div>
+              </div> -->
               <!-- /.p-contact__item -->
             </div>
-            <div class="p-contact__item" v-show="false">
+            <div class="p-contact__item " v-show="false">
               <!-- <label for="message">スパムでない場合は空欄</label> -->
-              <input type="text" name="bot-field" v-model="botField">
+              <input type="text" name="bot-field" v-model="botField" >
             </div>
             <!-- /.p-contact__item -->
             <div class="p-contact__submit">
               <button type="submit" class="thm-btn" :disabled="invalid || !validated">送信</button>
             </div>
+            <!-- /.p-contact__item -->
+            <ul name="address" >
+              <li v-for="item in cart" :key="item.id">
+                  {{ item.id }},{{ item.quantity }}
+              </li>
+            </ul>
+                  <!-- <span>Multiline message is:</span> -->
+<!-- <p style="white-space: pre-line;">{{ cart }} -->
+<!-- <textarea v-model="cart" v-bind:value="{id: cart.id}"></textarea> -->
+<!-- <p v-for="item in cart" :key="item.id">
+  {{ item.name }}
+  <input v-model="cart" v-bind:value="item">
+</p> -->
+                  
             <!-- /.p-contact__submit -->
           </validation-observer>
-          
           <!-- /.p-contact__form -->
         </div>
         <div class="result"></div>
-      <!-- <label for="email">Eメール</label> -->
-      <!-- <br />
+
+
+
+      <!-- <label for="email">Eメール</label>
+      <br />
       <input id="email" type="email" v-model="stripeEmail" placeholder="name@example.com" />
-      <br /> -->
-      <!-- <label for="card">クレジットカード</label>
-      <br /> -->
-      <!-- <small>
+      <br />
+      <label for="card">クレジットカード</label>
+      <br />
+      <small>
         任意のCVC、郵便番号、有効期限のStripeテストクレジットカード番号を使用し、テストできます。:
         <ul>
           <li>
             <span class="cc-number">4242 4242 4242 4242</span>
-          </li> -->
-          <!-- <li>
+          </li>
+          <li>
             <span class="cc-number">4000 0027 6000 3184</span> (requires authentication, will trigger a pop-up)
           </li>
           <li>
             <span class="cc-number">4000 0000 0000 9995</span> (will decline with a decline code of insufficient funds)
-          </li> -->
-        <!-- </ul>
+          </li>
+        </ul>
       </small>
       <card
         class="stripe-card"
@@ -106,8 +107,8 @@
         :options="stripeOptions"
         @change="complete = $event.complete"
       />
-      <small class="card-error">{{error}}</small> -->
-      <!-- <button
+      <small class="card-error">{{error}}</small>
+      <button
         class="pay-with-stripe button"
         @click="pay"
         :disabled="!stripeEmail || loading"
@@ -140,12 +141,14 @@ import { Card, handleCardPayment } from "vue-stripe-elements-plus";
 
 import { mapState } from "vuex";
 
-import  Contact from "~/components/Contact.vue";
+// import  Contact from "~/components/Contact.vue";
 
 export default {
-  components: { Card,Contact },
+  // props:["productid"],
+  components: { Card },
   computed: {
     ...mapState(["cartUIStatus"]),
+    ...mapState(["cart"]),
     sendingClass(){
         return {
           'is-sending'  : this.isSending,

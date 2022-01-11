@@ -72,6 +72,12 @@ import AppCard from "~/components/AppCard.vue";
 import { mapState, mapGetters } from "vuex";
 
 export default {
+  props: {
+      sampleProps: {
+          type: Object,
+          default: () => {},
+      }
+  },
   components: {
     AppCard
   },

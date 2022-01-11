@@ -27,7 +27,7 @@
                 </div><!-- /.contact-one__infos-icon -->
                 <div class="contact-one__infos-content">
                   <h3>Eメール</h3>
-                  <p><a href="mailto:masayatakashi@gmail.com">masayatakashi@gmail.com</a></p>
+                  <p><a href="mailto:soundslikemassage@gmail.com">soundslikemassage@gmail.com</a></p>
                 </div><!-- /.contact-one__infos-content -->
               </div><!-- /.contact-one__infos-single -->
               <div class="contact-one__infos-single">
