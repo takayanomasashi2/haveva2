@@ -4,9 +4,7 @@
       <h3>お客様情報</h3>
         <div class="p-contact contact-one__form">
           <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="onSubmit" :class="sendingClass"> -->
-          <form ref="observer" 
-           tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks">
-           <!-- v-slot="{ invalid, validated }" -->
+          <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks">
             <input type="hidden" name="form-name" value="contact">
             <div class="row">
               <div class="p-contact__item col-md-4">
@@ -75,7 +73,35 @@
               <button type="submit" class="thm-btn" :disabled="invalid || !validated">送信</button>
             </div>
             <!-- /.p-contact__submit -->
-          </form>
+          </validation-observer>
+
+
+<form action="" class="contact-form-validated contact-one__form" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass">
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" name="name" placeholder="Name">
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-6">
+                  <input type="text" name="email" placeholder="Email">
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-6">
+                  <input type="text" name="subject" placeholder="Subject">
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-6">
+                  <select name="discuss" class="selectpicker">
+                    <option value="">Discussion For</option>
+                    <option value="">Free Trial</option>
+                    <option value="">Busniess Inquery</option>
+                  </select>
+                </div><!-- /.col-md-6 -->
+                <div class="col-md-12">
+                  <textarea name="message" placeholder="Message"></textarea>
+                  <button type="submit" class="thm-btn contact-one__form-btn">Send Message</button>
+                </div><!-- /.col-md-12 -->
+              </div><!-- /.row -->
+            </form><!-- /.contact-one__form -->
+
+
           <!-- /.p-contact__form -->
         </div>
         <div class="result"></div>
