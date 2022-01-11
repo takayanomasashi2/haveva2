@@ -9,7 +9,7 @@
         <h3>{{ product.name }}</h3>
         <h4>{{ product.price | dollar }}</h4>
         <NuxtLink :to="`/product/${product.id}`">
-          <button class="multi-item">詳細 ></button>
+          <button class="multi-item">選択</button>
         </NuxtLink>
       </div>
     </div>

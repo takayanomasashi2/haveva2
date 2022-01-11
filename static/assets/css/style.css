@@ -33,7 +33,8 @@
 
 .body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    background: rgb(14, 30, 37);
+    /* background: white; */
+	background-image: url(/assets/images/background/banner-bg-1-1.png);
     color: white;
     overflow: hidden;
     margin: 0;
@@ -191,6 +192,11 @@ h6 {
 	color: #fff;
 	background-position: right center;
 }
+
+.thm-btn:disabled {
+	color: #808080;
+	background: #f4f4f8;
+	}
 
 .bootstrap-select .btn-light:not(:disabled):not(.disabled).active,
 .bootstrap-select .btn-light:not(:disabled):not(.disabled):active,
@@ -1321,8 +1327,8 @@ h6 {
 
 .cta-three__moc {
 	position: absolute;
-	top: -45px;
-	left: -47px;
+	top: 150px;
+	left: 0px;
 	animation: ImgBounce 10s ease-in-out 0s infinite alternate;
 }
 

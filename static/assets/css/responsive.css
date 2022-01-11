@@ -29,7 +29,7 @@
         display: none;
     }
     .cta-three__moc {
-        left: -20%;
+        left: -5%;
     }
     .cta-three__content {
         padding-left: 0;
@@ -70,7 +70,7 @@
     }
     .cta-three__moc {
         position: relative;
-        top: auto;
+        top: 22%;
         left: auto;
     }
     .cta-three__shape-1 {

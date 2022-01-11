@@ -155,5 +155,5 @@ export default {
   privateRuntimeConfig: {
     apiKey: API_KEY
   },
-  // target: 'serverless',
+  target: 'static',
 }

@@ -7,7 +7,7 @@
           <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks">
             <input type="hidden" name="form-name" value="contact">
             <div class="row">
-              <div class="p-contact__item col-md-6">
+              <div class="p-contact__item col-md-4">
                 <!-- <label for="username" style="visibility:hidden">お名前</label> -->
                 <validation-provider v-slot="{ errors }" rules="required|max:100" name="お名前">
                   <input type="text" id="username" name="username" v-model="username" autocomplete="name" placeholder="お名前">
@@ -15,7 +15,7 @@
                 </validation-provider>
               </div>
               <!-- /.p-contact__item -->
-              <div class="p-contact__item col-md-6">
+              <div class="p-contact__item col-md-8">
                 <!-- <label for="useremail" style="visibility:hidden">メールアドレス</label> -->
                 <validation-provider v-slot="{ errors }" rules="required|email|max:256" name="メールアドレス">
                   <input type="text" id="useremail" name="useremail" v-model="useremail" autocomplete="email" placeholder="メールアドレス">
@@ -23,21 +23,22 @@
                 </validation-provider>
               </div>
               <!-- /.p-contact__item -->
-              <div class="p-contact__item col-md-6">
+              <div class="p-contact__item col-md-4">
                 <!-- <label for="kenmei" style="visibility:hidden">件名</label> -->
-                <validation-provider v-slot="{ errors }" rules="required|max:100" name="電話番号">
-                  <input type="text" id="phone" name="phone" v-model="phone" autocomplete="phone" placeholder="電話番号">
+                <validation-provider v-slot="{ errors }" rules="required|number2|max:10" name="郵便番号">
+                  <input type="text" id="zipcode" name="zipcode" v-model="zipCode" placeholder="郵便番号">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
               </div>
               <!-- /.p-contact__item -->
-              <div class="p-contact__item col-md-6">
+              <div class="p-contact__item col-md-8">
                 <!-- <label for="kenmei" style="visibility:hidden">件名</label> -->
-                <validation-provider v-slot="{ errors }" rules="required|max:100" name="郵便番号">
-                  <input type="text" id="kenmei" name="kenmei" v-model="zipCode" placeholder="郵便番号">
+                <validation-provider v-slot="{ errors }" rules="required|number|max:20" name="電話番号">
+                  <input type="text" id="phone" name="phone" v-model="phone" autocomplete="phone" placeholder="電話番号">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
               </div>
+              
               <!-- <label>郵便番号<input v-model="zipCode" type="input" /></label> -->
   <!-- <label>住所<input v-model="address" type="input" /></label> -->
               <!-- /.p-contact__item -->
@@ -56,8 +57,8 @@
               <!-- /.p-contact__item -->
               <div class="p-contact__item col-md-12">
                 <!-- <label for="message" style="visibility:hidden">ご住所</label> -->
-                <validation-provider v-slot="{ errors }" rules="required|max:1000" name="ご住所">
-                  <textarea id="message" name="message" v-model="address" placeholder="ご住所"></textarea>
+                <validation-provider v-slot="{ errors }" rules="required|max:100" name="ご住所">
+                  <input id="address" name="ご住所" v-model="address" placeholder="ご住所">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
               </div>
@@ -174,8 +175,8 @@ export default {
       isSending       : false,
       isError         : false,
       completeMessage : '',
-      zipCode: "",
-      address: "",
+      zipCode: '',
+      address: '',
     };
   },
   methods: {
@@ -219,11 +220,10 @@ export default {
         this.completeMessage = '送信処理中…';
         const params = new URLSearchParams();
         params.append('form-name', 'contact');
-        params.append('username', this.username);
-        params.append('kenmei', this.kenmei);
         params.append('useremail', this.useremail);
-        params.append('topic', this.topic);
-        params.append('message', this.message);
+        params.append('zipcode', this.zipcode);
+        params.append('phone', this.phone);
+        params.append('address', this.address);
         if(this.botField){
           params.append('bot-field', this.botField);
         }
@@ -246,10 +246,10 @@ export default {
 
       resetForm() {
         this.username        = '';
-        this.kenmei        = '';
         this.useremail       = '';
-        this.topic       = 1;
-        this.message         = '';
+        this.zipcode        = '';
+        this.phone        = '';
+        this.address         = '';
         this.isError         = false;
         this.$refs.observer.reset();
       }
