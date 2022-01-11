@@ -59,8 +59,8 @@
             </div>
             <!-- /.p-contact__item -->
             
-              <!-- <textarea id="address  " name="address" v-for="item in cart" :key="item.id" v-bind:value="item.name"></textarea> -->
-              <p id="address" name="address">{{ userName }}</p>
+              <textarea id="address  " name="address" v-model="userName"></textarea>
+              <!-- <p id="address" name="address">{{ userName }}</p> -->
             
             
             <!-- /.p-contact__submit -->
