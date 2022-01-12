@@ -41,12 +41,12 @@
               
               <!-- /.p-contact__item -->
               <!-- <label for="message" style="visibility:hidden">ご住所</label> -->
-              <!-- <div class="p-contact__item col-md-12">
+              <div class="p-contact__item col-md-12">
                 <validation-provider v-slot="{ errors }" rules="required|max:100" name="ご住所">
                   <input id="address" name="address" v-model="address" placeholder="ご住所">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
-              </div> -->
+              </div>
               <!-- /.p-contact__item -->
             </div>
             <div class="p-contact__item " v-show="false">
