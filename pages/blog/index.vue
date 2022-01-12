@@ -17,7 +17,7 @@
     </div>
   </layout-wrapper> -->
   <section class="blog-one blog-one__home" id="blog">
-      <img src="/assets/images/shapes/blog-shape-1-1.png" alt="" class="blog-one__shape-1">
+      <!-- <img src="/assets/images/shapes/blog-shape-1-1.png" alt="" class="blog-one__shape-1"> -->
       <div class="container">
         <div class="block-title text-center">
           <span class="block-title__bubbles"></span>
