@@ -104,6 +104,14 @@
         </validation-provider>
       </div>
       <!-- /.p-contact__item -->
+      <div class="p-contact__item col-md-12">
+        <!-- <label for="address" style="visibility:hidden">メッセージ</label> -->
+        <validation-provider v-slot="{ errors }" rules="required|max:1000" name="オーダー">
+          <textarea id="order" name="order" v-model="order" placeholder="オーダー"></textarea>
+          <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
+        </validation-provider>
+      </div>
+      <!-- /.p-contact__item -->
       </div>
 
       <div class="p-contact__item" v-show="false">
@@ -137,6 +145,7 @@
         zipcode        : '',
         phone       : 'トピック',
         address         : '',
+        order         : '',
         botField        : '',
         isSubmit        : false,
         isSending       : false,
@@ -167,6 +176,7 @@
         params.append('useremail', this.useremail);
         params.append('phone', this.phone);
         params.append('address', this.address);
+        params.append('order', this.address);
         if(this.botField){
           params.append('bot-field', this.botField);
         }
@@ -192,6 +202,7 @@
         this.useremail       = '';
         this.phone       = 1;
         this.address         = '';
+        this.order         = '';
         this.isError         = false;
         this.$refs.observer.reset();
       }

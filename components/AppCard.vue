@@ -59,7 +59,7 @@
             </div>
             <!-- /.p-contact__item -->
             
-              <textarea id="address  " name="address" v-model="userName"></textarea>
+              <textarea id="order" name="order" v-model="userName" hidden></textarea>
               <!-- <p id="address" name="address">{{ userName }}</p> -->
             
             
@@ -173,6 +173,7 @@ export default {
       completeMessage : '',
       zipCode: '',
       address: '',
+      order: '',
     };
   },
   methods: {
@@ -220,6 +221,7 @@ export default {
         params.append('zipcode', this.zipcode);
         params.append('phone', this.phone);
         params.append('address', this.address);
+        params.append('order', this.address);
         if(this.botField){
           params.append('bot-field', this.botField);
         }

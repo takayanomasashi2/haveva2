@@ -85,20 +85,28 @@ export default {
     ...mapState(["cart"]),
     ...mapGetters(["cartCount", "cartTotal"])
   },
+  // data () {
+  //   return {
+  //     foo: ""
+  //   }
+  // },
   methods: {
     addToCart(item) {
       this.$store.commit("addOneToCart", item);
-      this.foo = ""
+      this.foo = "";
     },
     removeOneFromCart(item) {
       this.$store.commit("removeOneFromCart", item);
-      this.foo = ""
+      this.foo = "";
     },
     removeAllFromCart(item) {
       this.$store.commit("removeAllFromCart", item);
+      this.foo = "";
     },
     methodName: function(foo, bar) {
-      this.foo += "," +foo+"x"+bar ;
+      // this.foo += "," +foo+"x"+bar ;
+      this.foo += foo+"x"+bar +",";
+      this.foo = this.foo.replace("undefined", "");
     }
   }
 };
