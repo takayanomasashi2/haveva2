@@ -41,7 +41,7 @@
       </div>
     </section>
     
-    <Contact />
+    <!-- <Contact /> -->
     <!-- <CallToAction /> -->
   </div>
 </template>
