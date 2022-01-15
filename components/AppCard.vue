@@ -243,7 +243,7 @@ export default {
       .then(response => {
         //200 status header etc...
         console.log(response)
-        window.location.href = 'http://localhost:3000/thanks/'
+        window.location.href = 'https://www.soundslikemassage.tk/thanks/'
       })
       .catch(error => {
          console.log(error.response)
