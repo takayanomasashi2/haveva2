@@ -36,7 +36,7 @@
       </table>
 
       <section class="payment">
-        <app-card :userName=this.foo />
+        <app-card :orders=this.foo />
         <div class="total">
           <div class="caption">
             <p>
@@ -50,7 +50,8 @@
               <strong>{{ cartTotal | dollar }}</strong>
             </p>
             <p>お客様負担</p>
-            <p class="golden">{{ cartTotal | dollar }}</p>
+            <!-- <p class="golden">{{ cartTotal | dollar }}</p> -->
+            <p class="golden">配送費のみ</p>
           </div>
         </div>
       </section>

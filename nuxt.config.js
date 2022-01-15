@@ -39,6 +39,7 @@ export default {
     { src: "/assets/js/jquery.magnific-popup.min.js", type: "text/javascript", body: true },
     { src: "/assets/js/jquery.ajaxchimp.min.js", type: "text/javascript", body: true },
     { src: "https://yubinbango.github.io/yubinbango-core/yubinbango-core.js" },
+    { src: "https://carrier.formcarry.com/js/v1.js" },
   
   ],
     meta: [
@@ -114,7 +115,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit'],
+  modules: ['@nuxtjs/markdownit', '@nuxtjs/proxy'],
 
   //追加
   markdownit: {
@@ -156,4 +157,11 @@ export default {
     apiKey: API_KEY
   },
   target: 'static',
+  axios: {
+    proxy: true
+  },
+
+  proxy: {
+    '/api/': { target: 'http://localhost:3000', pathRewrite: {'^/api/': ''} }
+  }
 }

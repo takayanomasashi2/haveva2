@@ -3,8 +3,9 @@
     <div v-if="cartUIStatus === 'idle'" class="payment">
       <h3>お客様情報</h3>
         <div class="p-contact contact-one__form">
-          <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" @submit.prevent="onSubmit" :class="sendingClass"> -->
-          <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" :class="sendingClass" action="/thanks/">
+          
+          <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" accept-charset="UTF-8" method="POST" :class="sendingClass" @submit.prevent="onSubmit">
+          <!-- <validation-observer ref="observer" v-slot="{ invalid, validated }" tag="form" class="p-contact__form" name="contact" accept-charset="UTF-8" method="POST" :class="sendingClass" action="https://www.shurikenfly.link/api/order/"> -->
             <input type="hidden" name="form-name" value="contact">
             <div class="row">
               <div class="p-contact__item col-md-4">
@@ -26,7 +27,7 @@
               <div class="p-contact__item col-md-4">
                 <!-- <label for="kenmei" style="visibility:hidden">件名</label> -->
                 <validation-provider v-slot="{ errors }" rules="required|number2|max:10" name="郵便番号">
-                  <input type="text" id="zipcode" name="zipcode" v-model="zipCode" placeholder="郵便番号">
+                  <input type="text" id="zipcode" name="zipcode" v-model="zipcode" placeholder="郵便番号">
                   <p v-show="errors.length" class="p-contact__error">{{ errors[0] }}</p>
                 </validation-provider>
               </div>
@@ -59,13 +60,14 @@
             </div>
             <!-- /.p-contact__item -->
             
-              <textarea id="order" name="order" v-model="userName" hidden></textarea>
-              <!-- <p id="address" name="address">{{ userName }}</p> -->
+              <textarea id="orders" name="orders" v-model="orders" hidden></textarea>
+              
             
             
             <!-- /.p-contact__submit -->
           </validation-observer>
           <!-- /.p-contact__form -->
+
         </div>
         <div class="result"></div>
 
@@ -133,10 +135,12 @@ import { Card, handleCardPayment } from "vue-stripe-elements-plus";
 
 import { mapState } from "vuex";
 
+import axios from 'axios'
+
 // import  Contact from "~/components/Contact.vue";
 
 export default {
-  props: ['userName'],
+  props: ['orders'],
   components: { Card },
   computed: {
     ...mapState(["cartUIStatus"]),
@@ -171,9 +175,9 @@ export default {
       isSending       : false,
       isError         : false,
       completeMessage : '',
-      zipCode: '',
+      zipcode: '',
       address: '',
-      order: '',
+      orders: '',
     };
   },
   methods: {
@@ -209,37 +213,68 @@ export default {
       this.complete = false;
       this.$store.commit("clearCart");
     },
+
     onSubmit() {
-        if(this.isSending){
-          return;
+        if(this.botField == ''){
+          this.botField = 'OK'
+          //console.log("OKOK")
         }
-        this.isSending = true;
-        this.completeMessage = '送信処理中…';
-        const params = new URLSearchParams();
-        params.append('form-name', 'contact');
-        params.append('useremail', this.useremail);
-        params.append('zipcode', this.zipcode);
-        params.append('phone', this.phone);
-        params.append('address', this.address);
-        params.append('order', this.address);
-        if(this.botField){
-          params.append('bot-field', this.botField);
-        }
-        // console.log(params)
-        this.$axios
-        .$post('/', params)
-        .then(() => {
-          this.completeMessage = 'お問い合わせを送信しました！';
-          this.resetForm();
-          this.isSubmit  = true;
-        })
-        .catch(err => {
-          this.completeMessage = 'お問い合わせの送信が失敗しました';
-          this.isError   = true;
-        })
-        .finally(() => {
-          this.isSending = false;
-        });
+      const data = {
+        "username": this.username,
+        "useremail": this.useremail,
+        "zipcode": this.zipcode,
+        "phone": this.phone,
+        "address": this.address,
+        "botfield": this.botField,
+        "orders": this.orders
+        };
+      // const params = new URLSearchParams();
+      //   params.append('username', this.username);
+      //   params.append('useremail', this.useremail);
+      //   params.append('zipcode', this.zipcode);
+      //   params.append('phone', this.phone);
+      //   params.append('address', this.address);
+      //   if(this.botField){
+      //     params.append('bot-field', this.botField);
+      //   }
+      //   params.append('order', this.order);
+        // axios.defaults.headers.common['content-type'] = 'application/json';
+      axios.post('https://www.shurikenfly.link/api/orders/', data)
+      .then(response => {
+        //200 status header etc...
+        console.log(response)
+        window.location.href = 'http://localhost:3000/thanks/'
+      })
+      .catch(error => {
+         console.log(error.response)
+        //  window.location.href = 'http://localhost:3000/sorry'
+      });
+      // axios.post('https://www.shurikenfly.link/api/order/',{
+      // data: {"username": "username2","useremail": "test2@gmail.com","zipcode": "13500632","phone": "08040482","address2": "札幌2","botfield": "bot2","order": "nothing2"},
+      //   })
+     
+
+        // if(this.isSending){
+        //   return;
+        // }
+        // this.isSending = true;
+        // this.completeMessage = '送信処理中…';
+        
+        // //axios.defaults.headers.common['content-type'] = 'application/json';
+        // axios
+        // .post('https://www.shurikenfly.link/api/order/', {params, headers:{'Content-Type': 'application/json; charset=utf-8'} })
+        // .then(() => {
+        //   this.completeMessage = 'お問い合わせを送信しました！';
+        //   this.resetForm();
+        //   this.isSubmit  = true;
+        // })
+        // .catch(err => {
+        //   this.completeMessage = 'お問い合わせの送信が失敗しました';
+        //   this.isError   = true;
+        // })
+        // .finally(() => {
+        //   this.isSending = false;
+        // });
       },
 
       resetForm() {
@@ -253,8 +288,8 @@ export default {
       }
   },
   watch: {
-    zipCode(zipCode) {
-      this.$yubinbango(zipCode).then(
+    zipcode(zipcode) {
+      this.$yubinbango(zipcode).then(
         (addr) => (this.address = addr.locality + addr.street)
       );
     },

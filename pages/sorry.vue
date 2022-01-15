@@ -5,9 +5,9 @@
         <img src="/assets/images/mocs/Happy Ghost Balloon.H02.2k.png" alt="" class="cta-three__moc">
         <div class="card">
             <div class="header">
-                <h3>ご注文<br>ありがとうございます!</h3>
+                <h3>予期せぬ<br>エラーが発生しました!</h3>
             </div>
-            <p>レシートメールを送信いたしました（受信までに1分少々かかる時があります）。</p>
+            <p>大変お手数ですが、<a href="mailto:soundslikemassage@gmail.com">soundslikemassage@gmail.com</a>までお問い合わせいただけますでしょうか？</p>
             <p>
             <a id="back-link" href="/all">← 戻る</a>
             </p>

@@ -92,7 +92,7 @@
           <div class="side-menu__social">
             <!-- <a class="fab fa-facebook-f" href="#"></a> -->
             <!-- <a class="fab fa-twitter" href="#"></a> -->
-            <a class="fab fa-instagram" href="https://www.instagram.com/soundslikemassage/"></a>
+            <a class="fab fa-instagram" href="https://www.instagram.com/sounds_like_massage/"></a>
             <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
           </div>
         </div><!-- /.side-menu__content -->
