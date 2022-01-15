@@ -10,7 +10,7 @@
             <div class="col-lg-4">
               <div class="footer-widget footer-widget__about">
                 <a class="footer-widget__logo" href="/"><img src="/assets/images/logo.png" width="105" alt="Awesome Image" /></a>
-                <p>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>ビジネス得意科目は、IT・EC物流・英語。 </p>
+                <p>Web3.0専門メディアSHURIKENFLY代表。<br>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>ビジネス得意科目は、IT・EC物流・英語。<br>Solidity目下学習中。<br>お仕事のご依頼は、下記メールよりお気軽にお問い合わせください。</p>
                 <p><a href="mailto:needhelp@zimed.com">soundslikemassage@gmail.com</a> <br /> 
                 <!-- <a href="tel:666-888-0000">080-8431-0446</a> -->
                 </p>
@@ -58,7 +58,7 @@
               <a class="fab fa-instagram" target="_blank" href="https://www.instagram.com/soundslikemassage/"></a>
              <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
             </div><!-- /.site-footer__social -->
-            <p>© copyright 2022 by MASASHI</p>
+            <p>© copyright 2022 by SHURIKENFLY</p>
           </div><!-- /.inner-container -->
         </div><!-- /.container -->
       </div><!-- /.site-footer__bottom -->
