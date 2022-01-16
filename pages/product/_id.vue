@@ -122,7 +122,7 @@ export default {
 input,
 select {
   width: 60px;
-  font-size: 25px;
+  font-size: 20px;
   margin: 0 5px;
   padding: 5px 10px;
 }
