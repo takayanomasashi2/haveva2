@@ -16,7 +16,7 @@
     },
     head(){
       return {
-        title: "MASASHI - ITエンジニア"
+        title: "ShurikenFly - Web3メディア"
       }
     },
     mounted() {
