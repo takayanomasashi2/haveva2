@@ -11,7 +11,7 @@
               <div class="footer-widget footer-widget__about">
                 <a class="footer-widget__logo" href="/"><img src="/assets/images/logo.png" width="105" alt="Awesome Image" /></a>
                 <p>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>Web3.0専門メディアShurikenFly代表兼ブロックチェーンエンジニア。<br>ビジネス得意領域は、IT・英語・EC物流<br>お仕事のご依頼＆ご相談は、下記メールアドレスより、お気軽にお問い合わせくださいませ。</p>
-                <p><a href="mailto:needhelp@zimed.com">soundslikemassage@gmail.com</a> <br /> 
+                <p><a href="mailto:soundslikemassage@gmail.com">soundslikemassage@gmail.com</a> <br /> 
                 <!-- <a href="tel:666-888-0000">080-8431-0446</a> -->
                 </p>
               </div><!-- /.footer-widget -->
@@ -55,7 +55,7 @@
             <div class="site-footer__social">
              <!-- <a class="fab fa-facebook-f" href="#"></a> -->
               <!-- <a class="fab fa-twitter" href="https://twitter.com/masashi_d2c"></a> -->
-              <a class="fab fa-instagram" target="_blank" href="https://www.instagram.com/soundslikemassage/"></a>
+              <a class="fab fa-instagram" target="_blank" href="https://www.instagram.com/sounds_like_massage/"></a>
              <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
             </div><!-- /.site-footer__social -->
             <p>© copyright 2022 by ShurikenFly</p>
