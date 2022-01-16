@@ -155,7 +155,7 @@ export default {
   },
   mounted() {
     // create a PaymentIntent on Stripe with order information
-    this.$store.dispatch("createPaymentIntent");
+    // this.$store.dispatch("createPaymentIntent");
   },
   data() {
     return {
@@ -175,9 +175,10 @@ export default {
       isSending       : false,
       isError         : false,
       completeMessage : '',
+      phone:   '',
       zipcode: '',
       address: '',
-      orders: '',
+    
     };
   },
   methods: {
