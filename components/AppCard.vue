@@ -136,6 +136,8 @@ import { Card, handleCardPayment } from "vue-stripe-elements-plus";
 import { mapState } from "vuex";
 
 import axios from 'axios'
+axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*'
 
 // import  Contact from "~/components/Contact.vue";
 
@@ -240,8 +242,7 @@ export default {
       //   }
       //   params.append('order', this.order);
         // axios.defaults.headers.common['content-type'] = 'application/json';
-      axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
-      axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+      
       axios.post('https://www.shurikenfly.link/api/orders/', data)
       .then(response => {
         //200 status header etc...
