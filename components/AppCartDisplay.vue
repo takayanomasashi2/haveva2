@@ -106,7 +106,7 @@ export default {
     },
     methodName: function(foo, bar) {
       // this.foo += "," +foo+"x"+bar ;
-      this.foo += foo+"x"+bar +",";
+      this.foo += foo+"x"+bar +"|";
       this.foo = this.foo.replace("undefined", "");
     }
   }
