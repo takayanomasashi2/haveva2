@@ -10,7 +10,7 @@
             <div class="col-lg-4">
               <div class="footer-widget footer-widget__about">
                 <a class="footer-widget__logo" href="/"><img src="/assets/images/logo.png" width="105" alt="Awesome Image" /></a>
-                <p>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>Web3.0専門メディアShurikenFly代表兼ブロックチェーンエンジニア。<br>ビジネス得意科目は、IT・英語・EC物流<br>お仕事のご依頼は、下記メールよりお気軽にお問い合わせくださいませ。</p>
+                <p>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>Web3.0専門メディアShurikenFly代表兼ブロックチェーンエンジニア。<br>ビジネス得意領域は、IT・英語・EC物流<br>お仕事のご依頼＆ご相談は、下記メールアドレスより、お気軽にお問い合わせくださいませ。</p>
                 <p><a href="mailto:needhelp@zimed.com">soundslikemassage@gmail.com</a> <br /> 
                 <!-- <a href="tel:666-888-0000">080-8431-0446</a> -->
                 </p>
