@@ -51,7 +51,7 @@
             </p>
             <p>お客様負担</p>
             <!-- <p class="golden">{{ cartTotal | dollar }}</p> -->
-            <p class="golden">配送費のみ</p>
+            <p class="golden">配送費</p>
           </div>
         </div>
       </section>
