@@ -10,7 +10,7 @@
             <div class="col-lg-4">
               <div class="footer-widget footer-widget__about">
                 <a class="footer-widget__logo" href="/"><img src="/assets/images/logo.png" width="105" alt="Awesome Image" /></a>
-                <p>フリーランスエンジニア。<br>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>ブロックチェーン学習中。<br><br>お仕事依頼・ご相談は、下記メールアドレスより、お気軽にお問い合わせください。</p>
+                <p>フリーランスエンジニア。<br>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>Web3メディア開発中。<br><br>お仕事依頼・ご相談は、下記メールアドレスより、お気軽にお問い合わせください。</p>
                 <p><a href="mailto:soundslikemassage@gmail.com">soundslikemassage@gmail.com</a> <br /> 
                 <!-- <a href="tel:666-888-0000">080-8431-0446</a> -->
                 </p>
