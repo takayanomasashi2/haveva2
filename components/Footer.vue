@@ -10,7 +10,7 @@
             <div class="col-lg-4">
               <div class="footer-widget footer-widget__about">
                 <a class="footer-widget__logo" href="/"><img src="/assets/images/logo.png" width="105" alt="Awesome Image" /></a>
-                <p>フリーランスエンジニア。<br>北海道旭川市生まれ、HIPHOP/R&B育ち。<br>音楽と旅が好きな人はだいたい友達。<br>Web3メディア開発中。<br><br>お仕事依頼・ご相談は、下記メールアドレスより、お気軽にお問い合わせください。</p>
+                <p>フリーランスエンジニア。<br>北海道旭川市生まれHIPHOP育ち。<br>海外旅行好きはだいたい友達。<br>『Mastering Ethereum』翻訳中。<br><br>お仕事依頼・ご相談は、下記メールアドレスより、お気軽にお問い合わせください。</p>
                 <p><a href="mailto:soundslikemassage@gmail.com">soundslikemassage@gmail.com</a> <br /> 
                 <!-- <a href="tel:666-888-0000">080-8431-0446</a> -->
                 </p>
@@ -55,7 +55,7 @@
             <div class="site-footer__social">
              <!-- <a class="fab fa-facebook-f" href="#"></a> -->
               <!-- <a class="fab fa-twitter" href="https://twitter.com/masashi_d2c"></a> -->
-              <a class="fab fa-instagram" target="_blank" href="https://www.instagram.com/sounds_like_massage/"></a>
+              <a class="fab fa-instagram" target="_blank" href="https://www.instagram.com/masashi_bc/"></a>
              <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
             </div><!-- /.site-footer__social -->
             <p>© copyright 2022 by ShurikenFly</p>
@@ -92,7 +92,7 @@
           <div class="side-menu__social">
             <!-- <a class="fab fa-facebook-f" href="#"></a> -->
             <!-- <a class="fab fa-twitter" href="#"></a> -->
-            <a class="fab fa-instagram" href="https://www.instagram.com/sounds_like_massage/"></a>
+            <a class="fab fa-instagram" href="https://www.instagram.com/masashi_bc/"></a>
             <!-- <a class="fab fa-pinterest-p" href="#"></a> -->
           </div>
         </div><!-- /.side-menu__content -->
