@@ -16,7 +16,7 @@
         ></star-rating>
         <h4 class="price">{{ product.price | dollar }}</h4>
         <p>{{ product.description }}</p>
-        <p>複数個選択いただいても、お一人様１個しか送れませんので、ご理解のほどよろしくお願い申し上げます。</p>
+        <p>複数個選択いただいても、お一人様に１個しか送れませんので、ご理解のほどよろしくお願い申し上げます。</p>
         <div class="product-options">
           <div class="quantity">
             <button class="update-num" @click="quantity > 0 ? quantity-- : quantity = 0">-</button>
