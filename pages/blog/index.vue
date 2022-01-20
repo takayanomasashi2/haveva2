@@ -66,7 +66,7 @@ export default {
   async asyncData({ $config }) {
     try {
     const blog = await axios.get(
-      `${$config.apiUrl}/blog?limit=4&filters=flag[equals]true`,
+      `${$config.apiUrl}/blog?filters=flag[equals]true`,
       {
         headers: { 'X-MICROCMS-API-KEY': $config.apiKey },
       }
