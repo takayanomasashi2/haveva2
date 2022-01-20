@@ -16,7 +16,7 @@
     },
     head(){
       return {
-        title: 'ShurikenFly - "Web3メディア"'
+        title: 'ShurikenFly'
       }
     },
     mounted() {
